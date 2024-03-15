@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DRP-HCB-Bioinformatics - Bioinformatics servers and user policy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DRP-HCB-Bioinformatics</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./training.html">
+ <span class="menu-text">Training</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./best_practices.html">
+ <span class="menu-text">Best Practices</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bioinformatics-servers" id="toc-bioinformatics-servers" class="nav-link active" data-scroll-target="#bioinformatics-servers">Bioinformatics Servers</a></li>
+  <li><a href="#server-access" id="toc-server-access" class="nav-link" data-scroll-target="#server-access">Server access</a>
+  <ul class="collapse">
+  <li><a href="#r-and-rstudio" id="toc-r-and-rstudio" class="nav-link" data-scroll-target="#r-and-rstudio">R and RStudio</a></li>
+  <li><a href="#jupyter-hub" id="toc-jupyter-hub" class="nav-link" data-scroll-target="#jupyter-hub">Jupyter Hub</a></li>
+  <li><a href="#web-server" id="toc-web-server" class="nav-link" data-scroll-target="#web-server">Web server</a></li>
+  </ul></li>
+  <li><a href="#data-policy" id="toc-data-policy" class="nav-link" data-scroll-target="#data-policy">Data policy</a></li>
+  <li><a href="#data-management" id="toc-data-management" class="nav-link" data-scroll-target="#data-management">Data management</a></li>
+  <li><a href="#server-usage" id="toc-server-usage" class="nav-link" data-scroll-target="#server-usage">Server usage</a></li>
+  <li><a href="#software-and-updates" id="toc-software-and-updates" class="nav-link" data-scroll-target="#software-and-updates">Software and updates</a></li>
+  <li><a href="#storage-and-backups" id="toc-storage-and-backups" class="nav-link" data-scroll-target="#storage-and-backups">Storage and Backups</a></li>
+  <li><a href="#mailing-list" id="toc-mailing-list" class="nav-link" data-scroll-target="#mailing-list">Mailing list</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bioinformatics servers and user policy</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="bioinformatics-servers" class="level2">
+<h2 class="anchored" data-anchor-id="bioinformatics-servers">Bioinformatics Servers</h2>
+<p>These servers are funded by the Wellcome Trust and are managed by the DRP-HCB bioinformatics core.</p>
+<p>Accounts are limited to users with active DRP-HCB projects. To request an account please contact the bioinformatics core.</p>
+<p>Once your account is active, the following servers can be accessed over the university network or via the <a href="https://www.ed.ac.uk/information-services/computing/desktop-personal/vpn">VPN service</a> by logging in with your EASE credentials.</p>
+<ul>
+<li><p>bifx-core1.bio.ed.ac.uk</p>
+<ul>
+<li>512Gb RAM</li>
+<li>128 dual CPU cores</li>
+<li>Command line usage (ssh)</li>
+<li>37Tb scratch space at /scratch</li>
+</ul></li>
+<li><p>bifx-core2.bio.ed.ac.uk</p>
+<ul>
+<li>512Gb RAM</li>
+<li>32 dual CPU cores</li>
+<li>Command line usage (ssh)</li>
+<li>R-Studio: <a href="http://bifx-core2.bio.ed.ac.uk:8787/" class="uri">http://bifx-core2.bio.ed.ac.uk:8787/</a></li>
+<li>R-Shiny: <a href="http://bifx-core2.bio.ed.ac.uk:3838/" class="uri">http://bifx-core2.bio.ed.ac.uk:3838/</a></li>
+<li>Apache web server</li>
+</ul></li>
+<li><p>bifx-core3.bio.ed.ac.uk</p>
+<ul>
+<li>1Tb RAM</li>
+<li>128 dual CPU cores</li>
+<li>Command line usage (ssh)</li>
+<li>R-Studio: <a href="https://bifx-rstudio.bio.ed.ac.uk/" class="uri">https://bifx-rstudio.bio.ed.ac.uk/</a></li>
+<li>R-Shiny: <a href="http://bifx-core3.bio.ed.ac.uk:3838/" class="uri">http://bifx-core3.bio.ed.ac.uk:3838/</a></li>
+<li>Jupyter Hub: <a href="http://bifx-core3.bio.ed.ac.uk:8888/" class="uri">http://bifx-core3.bio.ed.ac.uk:8888/</a></li>
+<li>Apache web server</li>
+</ul></li>
+</ul>
+</section>
+<section id="server-access" class="level2">
+<h2 class="anchored" data-anchor-id="server-access">Server access</h2>
+<p>For command line access, use the ssh command from a Terminal application in Windows, MacOS and Linux e.g.</p>
+<ul>
+<li><code>ssh -Y username@bifx-core1.bio.ed.ac.uk</code></li>
+</ul>
+<p>If you prefer to use a graphical interface the servers can be accessed via X2Go or with the Windows Remote Desktop application.</p>
+<ul>
+<li><p>X2Go</p>
+<ul>
+<li><a href="https://wiki.x2go.org/doku.php/doc:installation:start">Download the X2Go client</a></li>
+</ul></li>
+<li><p>Remote Desktop</p>
+<ul>
+<li><p>Pre-installed on Windows</p></li>
+<li><p><a href="https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12">Download for Mac from the App store</a></p></li>
+</ul></li>
+</ul>
+<section id="r-and-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="r-and-rstudio">R and RStudio</h3>
+<ul>
+<li><p>RStudio on bifx-core3 can be accessed at <a href="https://bifx-rstudio.bio.ed.ac.uk" class="uri">https://bifx-rstudio.bio.ed.ac.uk</a></p></li>
+<li><p>A Shiny server is available on the university network only at <a href="http://bifx-core3.bio.ed.ac.uk:3838" class="uri">http://bifx-core3.bio.ed.ac.uk:3838</a></p>
+<ul>
+<li><p>Add your own Shiny Apps to a <code>ShinyApps</code> folder in your home directory.</p></li>
+<li><p>Launch these from http://bifx-core3.bio.ed.ac.uk:3838/username/</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="jupyter-hub" class="level3">
+<h3 class="anchored" data-anchor-id="jupyter-hub">Jupyter Hub</h3>
+<ul>
+<li>Jupyter Hub on bifx-core3 can be accessed at <a href="https://bifx-core3.bio.ed.ac.uk:8888" class="uri">https://bifx-core3.bio.ed.ac.uk:8888</a></li>
+</ul>
+</section>
+<section id="web-server" class="level3">
+<h3 class="anchored" data-anchor-id="web-server">Web server</h3>
+<p>Data on the server can be accessed over the web (e.g.&nbsp;files, images, html documents, IGV/UCSC tracks). Please contact us for details on how to set this up.</p>
+</section>
+</section>
+<section id="data-policy" class="level2">
+<h2 class="anchored" data-anchor-id="data-policy">Data policy</h2>
+<ul>
+<li><p>No personal data should be stored on the bifx-core servers. All data should be related to projects associated with the DRP unless dispensation has been given.</p></li>
+<li><p>All data on the bifx-core servers can be viewed by members of the bioinformatics core or the DRP-HCB director.</p></li>
+<li><p>As the bioinformatics core team have superuser permissions, we can see all data on the server. Instructions on how to access the servers are lodged with the DRP-HCB director in case of emergency. Therefore they are a de-facto administrator.</p></li>
+<li><p>Your data can be accessed by your PI on request. No request is needed if the PI has an account on the server and can view your files. Data stored on the servers should only relate to active DRP-HCB projects submitted by the grant holder and therefore it is reasonable that they can access their own data.</p></li>
+<li><p>Users are responsible for their own data (see backup policy).</p></li>
+<li><p>By default, when you create a new file on the server it is created with the following permissions:</p>
+<ul>
+<li>Personal: read/write/execute</li>
+<li>Global/group: read</li>
+</ul></li>
+<li><p>This means that only you can change, delete or execute the new file, but anyone logged in to the server can view it. If you would like to change the permissions on a file you can use the <code>chmod</code> command. Further details on how to do this can be found by reviewing our introduction to linux course.</p></li>
+</ul>
+</section>
+<section id="data-management" class="level2">
+<h2 class="anchored" data-anchor-id="data-management">Data management</h2>
+<ul>
+<li><p>Users should have a data management plan for their projects. Please see <a href="https://uoe.sharepoint.com/:w:/s/wcbbioinformatics/EQAVC1KoHmtBrA6rUOasQcIBisBh2fIQ3gBp7XA_3zWlxQ?e=c2xMbY">this document</a> for advice.</p></li>
+<li><p>Users should endeavour to minimise disk usage by removing unnecessary files and compressing files where appropriate.</p></li>
+<li><p>Completed projects should be archived with metadata and code to ensure reproducibility.</p></li>
+<li><p>Before you leave the university, please ensure all required data is accessible to your group.</p></li>
+<li><p>Group folders exist on the bifx-core servers at /groups. These can be used for shared data and for archiving old projects/accounts.</p></li>
+<li><p>Please follow our recommended <a href="best_practices.html">best practices</a> for working on the bifx-core servers. This web page will be updated regularly.</p></li>
+</ul>
+</section>
+<section id="server-usage" class="level2">
+<h2 class="anchored" data-anchor-id="server-usage">Server usage</h2>
+<ul>
+<li><p>All users must complete our <a href="http://bifx-core3.bio.ed.ac.uk/hyweldd/training/Bioinformatics_on_the_Command_Line/">introduction to linux</a> course, either in their own time or by attending one of our workshops.</p></li>
+<li><p>The bifx-core servers are a shared environment and users are responsible for ensuring their jobs do not overwhelm computing resources. The servers can cope with high memory usage and multi-threading, however they will slow down when there is a high number of read/write operations.</p>
+<ul>
+<li><p>Limit simultaneous jobs with large read/write requirements (e.g.&nbsp;genome alignment).</p></li>
+<li><p>Do not set multi-threaded jobs to use the majority of CPUs.</p></li>
+</ul></li>
+<li><p>In particular, users should be aware of Unix commands to monitor their jobs and avoid overuse of computing resources, e.g:</p>
+<ul>
+<li><code>ps / pgrep</code></li>
+<li><code>top / htop</code></li>
+<li><code>nice</code></li>
+<li><code>kill</code></li>
+</ul></li>
+<li><p>Use the scratch space in <code>/scratch</code> to speed up analyses/downloads/uploads. This is local disk space which will respond quicker. However, it is <strong>NOT BACKED UP</strong> and should be used as temporary storage only. All key datasets should be transferred to your home space.</p></li>
+</ul>
+</section>
+<section id="software-and-updates" class="level2">
+<h2 class="anchored" data-anchor-id="software-and-updates">Software and updates</h2>
+<ul>
+<li><p>The bioinformatics core will regularly maintain software and perform updates. We will strive to provide adequate warning when updates may cause interruption. All communication will be broadcast via the bifx-users mailing list (see below).</p></li>
+<li><p>Details on version control of bioinformatics software and maintaining your own packages are available in our <a href="best_practices.html">best practices</a> section.</p></li>
+</ul>
+</section>
+<section id="storage-and-backups" class="level2">
+<h2 class="anchored" data-anchor-id="storage-and-backups">Storage and Backups</h2>
+<ul>
+<li><p>Data saved in home directories is stored on the University of Edinburgh DataStore service. Two backup systems exist:</p>
+<ul>
+<li>Daily ‘snapshots’ kept for two weeks to allow users to restore data.</li>
+<li>Daily tape backups kept for sixty days in case of total data loss.</li>
+</ul></li>
+<li><p>Data in <code>/scratch</code> directories is not backed up. This disk space is provided to speed up analysis but output files should be copied back to your home directory. Please remove data from /scratch regularly to free up space for other users. Old data may be periodically removed by the bioinformatics core facility to free up space.</p></li>
+<li><p>We recommend that users keep additional backups of key datasets e.g:</p>
+<ul>
+<li><p>Personal copies on encrypted external HDD.</p>
+<ul>
+<li>See <a href="https://www.ed.ac.uk/infosec/how-to-protect/encrypting">here</a> for university advice on encrypting devices.</li>
+</ul></li>
+<li><p>Online research data repositories e.g.</p>
+<ul>
+<li><p>Sequence repositories (GEO, SRA, ArrayExpress)</p></li>
+<li><p><a href="https://zenodo.org/">Zenodo</a></p></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="mailing-list" class="level2">
+<h2 class="anchored" data-anchor-id="mailing-list">Mailing list</h2>
+<p>For announcements regarding server issues and updates, please join our mailing list. To join, send an email with no subject line to the following address: <a href="mailto:sympa@mlist.is.ed.ac.uk" class="email">sympa@mlist.is.ed.ac.uk</a></p>
+<p>Include the following 2 lines of text (replacing FIRSTNAME and LASTNAME with your own first name and surname) SUBSCRIBE <a href="mailto:bifx-users@mlist.is.ed.ac.uk" class="email">bifx-users@mlist.is.ed.ac.uk</a> FIRSTNAME LASTNAME QUIT</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

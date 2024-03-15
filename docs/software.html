@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DRP-HCB-Bioinformatics - Running and managing software</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DRP-HCB-Bioinformatics</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./training.html">
+ <span class="menu-text">Training</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./best_practices.html">
+ <span class="menu-text">Best Practices</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#running-command-line-tools" id="toc-running-command-line-tools" class="nav-link active" data-scroll-target="#running-command-line-tools">Running command line tools</a></li>
+  <li><a href="#managing-your-own-software-tools-and-packages-with-conda" id="toc-managing-your-own-software-tools-and-packages-with-conda" class="nav-link" data-scroll-target="#managing-your-own-software-tools-and-packages-with-conda">Managing your own software tools and packages with conda</a></li>
+  <li><a href="#using-python-on-bifx-core-servers" id="toc-using-python-on-bifx-core-servers" class="nav-link" data-scroll-target="#using-python-on-bifx-core-servers">Using Python on bifx-core servers</a></li>
+  <li><a href="#using-r-on-bifx-core-servers" id="toc-using-r-on-bifx-core-servers" class="nav-link" data-scroll-target="#using-r-on-bifx-core-servers">Using R on bifx-core servers</a></li>
+  <li><a href="#using-perl-on-bifx-core-servers" id="toc-using-perl-on-bifx-core-servers" class="nav-link" data-scroll-target="#using-perl-on-bifx-core-servers">Using perl on bifx-core servers</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Running and managing software</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="running-command-line-tools" class="level2">
+<h2 class="anchored" data-anchor-id="running-command-line-tools">Running command line tools</h2>
+<p>The command line tools available on the server can be classified as either standard GNU/Linux utilities or specialised bioinformatics tools.</p>
+<section id="standard-gnulinux-utilities" class="level3">
+<h3 class="anchored" data-anchor-id="standard-gnulinux-utilities">Standard GNU/Linux utilities</h3>
+<p>The server provides access to a wide range of standard GNU/Linux utilities, which are installed in /usr/bin.</p>
+<ul>
+<li>A general introduction to the use of these utilities can be found <a href="http://bifx-core3.bio.ed.ac.uk/hyweldd/training/Bioinformatics_on_the_Command_Line/index.html">here</a>.</li>
+<li>A complete list of the available utilities can be obtained by running <code>ls /usr/bin</code> on the commmand line. More information on individual utilities can be accessed by running <code>man [NAME OF UTILITY]</code></li>
+<li>A detailed manual covering many of the utilities available can be accessed by running the <code>info</code> command on the command line</li>
+</ul>
+</section>
+<section id="specialised-bioinformatics-tools" class="level3">
+<h3 class="anchored" data-anchor-id="specialised-bioinformatics-tools">Specialised bioinformatics tools</h3>
+<p>Specialised bioinformatics tools are implemented on the server as singularity containers. The main benefit of this approach is that it allows multiple versions of the same tool to be installed in parallel on the server. This gives us a way of ensuring that the latest versions of software tools are available on the server without breaking existing user scripts and pipelines that rely on old versions. Each singularity container is accompanied by a wrapper script that enables users to call the corresponding tool directly. There are also two helper scripts: <code>tools</code>, which enables users to list the tools available, and <code>versions</code>, which lists the available versions of the tools. It is possible to run a tool by specifying its name as listed in the output of the <code>tools</code> command, or to run a specific version of a tool by including the version number as shown in the output of the <code>versions</code> command.</p>
+<p>We recommend that you specify a particular version of any tools that are included in scripts. Calling the tool by name only generally runs to the latest version of the tool, which may change over time as new versions are installed. This could cause problems for scripts that were written to use older versions of the tool.</p>
+<p>The <code>man</code> and <code>info</code> commands do not provide help for specialised bioinformatics tools on bifx-core. As an alternative, many tools provide help when run with the <code>--help</code> or <code>-h</code> flags, and provide version information when run with the <code>--version</code> or sometimes <code>-version</code> flags.</p>
+<p>Specialised bioinformatics tools, or specific versions of tools, that are not currently installed on bifx-core can be requested by contacting the DRP-HCB bioinformatics core.</p>
+<section id="case-study-bedtools" class="level4">
+<h4 class="anchored" data-anchor-id="case-study-bedtools">Case study: bedtools</h4>
+<p>In this example, we show how to list and run different versions of bedtools on bifx-core:</p>
+<pre><code>hyweldd@bifx-core3:~$ tools
+alignmentSieve
+bamCompare
+bamCoverage
+bamPEFragmentSize
+bedtools
+...
+hyweldd@bifx-core3:~$ bedtools --version
+bedtools v2.30.0
+hyweldd@bifx-core3:~$ bedtools --help
+bedtools is a powerful toolset for genome arithmetic.
+
+Version:   v2.30.0
+About:     developed in the quinlanlab.org and by many contributors worldwide.
+...
+hyweldd@bifx-core3:~$ versions bedtools
+bedtools-2.29.2
+bedtools-2.30.0
+hyweldd@bifx-core3:~$ bedtools-2.29.2 --version
+bedtools v2.29.2
+hyweldd@bifx-core3:~$ bedtools-2.30.0 --version
+bedtools v2.30.0
+hyweldd@bifx-core3:~$ </code></pre>
+</section>
+</section>
+</section>
+<section id="managing-your-own-software-tools-and-packages-with-conda" class="level2">
+<h2 class="anchored" data-anchor-id="managing-your-own-software-tools-and-packages-with-conda">Managing your own software tools and packages with conda</h2>
+<p>In the preceding section, we have shown how to run command line tools that are installed on bifx-core. In addition to using these tools, it is also possible to manage your own software tools and environments using conda (see <a href="https://docs.conda.io/projects/conda/en/latest/" class="uri">https://docs.conda.io/projects/conda/en/latest/</a> for more details). This is currently our recommended method for managing python packages and versions, which may be necessary if you are developing your own python scripts. While conda does provide the ability to manage R packages, we do not currently recommend using conda for this purpose. Our best practices for working with R packages are discussed later in this guide.</p>
+<section id="installing-conda" class="level3">
+<h3 class="anchored" data-anchor-id="installing-conda">Installing conda</h3>
+<p>If you would like to use conda, we recommend that you install it in your home directory using the miniconda installer. You can do this using the following steps:</p>
+<ol type="1">
+<li>Download the miniconda installer into your home directory by navigating to your home directory and running <code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh</code></li>
+<li>Calculate the md5 checksum of the downloaded installer by running the command <code>md5sum Miniconda3-latest-Linux-x86_64.sh</code> and check that it is the same as the value shown at <a href="https://repo.anaconda.com/miniconda/" class="uri">https://repo.anaconda.com/miniconda/</a> for the <code>Miniconda3-latest-Linux-x86_64.sh</code> script</li>
+<li>If the checksums match, install conda by running <code>sh Miniconda3-latest-Linux-x86_64.sh</code> and following the steps</li>
+</ol>
+<ul>
+<li>When asked about the license terms, review and accept them (type <code>yes</code>)</li>
+<li>Accept the offer to install conda to the default location <code>/homes/[YOUR USERNAME]/miniconda3</code> by pressing <code>ENTER</code></li>
+<li>Accept the offer to initialise miniconda3 by using conda init by typing <code>yes</code></li>
+</ul>
+<ol start="4" type="1">
+<li>When the installer has finished, log out from bifx-core3, then log back in and run <code>conda --version</code> to verify that conda has been installed</li>
+<li>Run <code>conda update conda</code> to ensure that conda is up to date</li>
+<li>Run <code>conda config --set auto_activate_base false</code> to prevent the base environment from being activated automatically on login</li>
+</ol>
+</section>
+<section id="setting-up-your-conda-channels" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-your-conda-channels">Setting up your conda channels</h3>
+<p>In conda, software tools and packages are downloaded from remote repositories known as channels. conda provides its own default channels, but we recommend that users add the following two community mantained channels as well: - <code>bioconda</code>, which is dedicated to the distribution of bioinformatics software, and contains a far wider selection of bioinformatics tools than the default conda channels - <code>conda-forge</code>, which is a large community led channel that provides a wide range of software, including some tools that are required as dependencies by some bioinformatics tools distributed via the <code>bioconda</code> channel</p>
+<p>We recommend that you add the <code>bioconda</code> channel with high priority, and the <code>conda-forge</code> channel with low priority, using the following steps: 1. Run <code>conda config --add channels bioconda</code> to add bioconda with high priority 2. Run <code>conda config --append channels conda-forge</code> to add conda-forge with low priority 3. Run <code>conda config --show channels</code>. You should see the following:</p>
+<pre><code>channels:
+    - bioconda
+    - defaults
+    - conda-forge</code></pre>
+<p><em>Note:</em> If the channels do not appear in the correct order, you can run <code>conda config --remove channels bioconda</code>, then <code>conda config --remove channels conda-forge</code>, then try again.</p>
+</section>
+<section id="managing-conda-environments" class="level3">
+<h3 class="anchored" data-anchor-id="managing-conda-environments">Managing conda environments</h3>
+<p>By default, conda installs software tools into the directory in which it was installed, which is known as the <em>base environment</em>. You can check the location of this directory by running <code>conda info</code>. If you followed the steps above to install conda, this is the default location <code>/homes/[YOUR USERNAME]/miniconda3</code>.</p>
+<p>One of the benefits of using conda to manage bioinformatics software is that it allows you to create different environments and easily switch between them. This is particularly useful if you work on multiple projects that use different bioinformatics software. Each user created environment has a dedicated directory stored in the <code>env</code> subdirectory of the base environment directory.</p>
+<p>We recommend that you should always create your own conda environment to install software and leave the base environment as it is, even if you do not need multiple environments, as user environments are easier to modify and update than the base environment.</p>
+<p>The following commands can be used to create and manage conda environments: - <code>conda create -n [ENVIRONMENT NAME] [LIST OF PACKAGES TO INSTALL IN THE ENVIRONMENT (optional)]</code> to create a new conda environment - <code>conda activate [ENVIRONMENT NAME]</code> to activate a conda environment - <code>conda deactivate</code> to deactivate a conda environment - <code>conda env list</code> to list the conda environments, showing which is active - <code>conda remove</code> to remove an environment - <code>conda env export</code> to export an environment to a yaml file - <code>conda search</code> to search for a software package - <code>conda install</code> to install a software package in the active environment</p>
+<p>A useful guide to conda commands can be found here:</p>
+<p><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html" class="uri">https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html</a></p>
+</section>
+</section>
+<section id="using-python-on-bifx-core-servers" class="level2">
+<h2 class="anchored" data-anchor-id="using-python-on-bifx-core-servers">Using Python on bifx-core servers</h2>
+<p>We recommend using Conda to maintain your Python packages and environments. <strong>JupyterHub</strong> can be accessed from within the Univeristy of Edinburgh network at the following url:</p>
+<p><a href="https://bifx-core3.bio.ed.ac.uk:8888" class="uri">https://bifx-core3.bio.ed.ac.uk:8888</a></p>
+<p>If you would like to add a Conda environment to JupyterHub you will need to install <em>nb_conda_kernels</em> then add a pre-existing environment. You can run the following commands on the command line:</p>
+<pre class="{bash}"><code>## Install nb_conda_kernels in your conda base environment
+conda install nb_conda_kernels  # in base environment
+
+## Example to add the conda environment py3.9
+python -m ipykernel install --user --name py3.9 --display-name py3.9 </code></pre>
+</section>
+<section id="using-r-on-bifx-core-servers" class="level2">
+<h2 class="anchored" data-anchor-id="using-r-on-bifx-core-servers">Using R on bifx-core servers</h2>
+<p>We recommend that you use <strong>RStudio</strong> to perform R analyses on the bifx-core servers. RStudio server is installed on bifx-core3, and can be accessed from within the University of Edinburgh network at the following url:</p>
+<p><a href="https://bifx-rstudio.bio.ed.ac.uk" class="uri">https://bifx-rstudio.bio.ed.ac.uk</a></p>
+<section id="managing-r-packages-with-renv" class="level3">
+<h3 class="anchored" data-anchor-id="managing-r-packages-with-renv">Managing R packages with Renv</h3>
+<p>Renv is a tool that is similar to conda, in that it makes it possible to create multiple environments, but is specialised for use with R, is implemented as an R package, and can be managed from the R console. You can learn more about Renv here:</p>
+<p><a href="https://rstudio.github.io/renv/articles/renv.html" class="uri">https://rstudio.github.io/renv/articles/renv.html</a></p>
+</section>
+</section>
+<section id="using-perl-on-bifx-core-servers" class="level2">
+<h2 class="anchored" data-anchor-id="using-perl-on-bifx-core-servers">Using perl on bifx-core servers</h2>
+<p>A number of different options are available for running perl scripts on bifx-core. We provide system wide installations that should be sufficient for most applications, and users also have the option of managing their own perl installations if they need specific perl versions or modules.</p>
+<section id="system-wide-perl-installations-on-bifx-core-servers" class="level3">
+<h3 class="anchored" data-anchor-id="system-wide-perl-installations-on-bifx-core-servers">System-wide perl installations on bifx-core servers</h3>
+<p>The system perl implementation on bifx-core, <code>/usr/bin/perl</code>, does not come with any extra packages, such as BioPerl packages, installed system wide. In order to run BioPerl scripts, we provide a custom containerised installation of perl, <code>/library/software/bin/bioperl</code>, that does include many of the BioPerl packages. This is our recommended version to use for most applications.</p>
+</section>
+<section id="managing-your-own-perl-environment" class="level3">
+<h3 class="anchored" data-anchor-id="managing-your-own-perl-environment">Managing your own perl environment</h3>
+<p>While we expect that <code>/library/software/bin/bioperl</code> should be sufficient for most bioinformatics applications, it may be necessary for some users to manage their own perl environments. We recommend the use of either <code>conda</code> or <code>perlbrew</code> for this purpose, as both allow users to manage local installations of <code>perl</code> without requiring administrator permissions.</p>
+<p>Both <code>conda</code> and <code>perlbrew</code> have strengths and weaknesses relative to each other, so the choice of which to use depends on the user’s particular requirements.</p>
+<p><code>conda</code> provides a quick and easy way of managing <code>perl</code> installations and environments, and can also be used to install other tools, as described earlier in this guide. However, when using <code>conda</code> to manage a perl installation, packages are installed using conda recipes rather than from CPAN. This may cause problems as not all perl packages have conda recipes available, and the conda recipe corresponding to a particular package may be difficult to find even when it exists.</p>
+<p>By contrast <code>perlbrew</code> provides access to all CPAN packages through the <code>cpan</code> command, giving access to a wider range of packages. The main drawback of <code>perlbrew</code> when compared to <code>conda</code> is that it builds everything from source rather than providing pre-built packages. This makes the process of installing packages more time consuming, and also potentially more difficult if a particular CPAN package fails to build due to missing dependencies or failing tests. A further limitation of <code>perlbrew</code> when compared to <code>conda</code> is that it does not allow you to maintain different environments using the same version of <code>perl</code>.</p>
+<p>We describe how to set up a local installation of <code>perl</code> using <code>conda</code> and <code>perlbrew</code> in the following sections.</p>
+<section id="managing-your-own-perl-installation-with-conda" class="level4">
+<h4 class="anchored" data-anchor-id="managing-your-own-perl-installation-with-conda">Managing your own perl installation with conda</h4>
+<p>We provide a conda environment containing the same packages as the environment used by <code>/library/software/bin/bioperl</code> in <code>/library/software/conda_environments/BioPerl-1.7.2/BioPerl-1.7.2.yml</code>. This can be used to add some additional packages, as in the following example (note that this example assumes that conda has already been installed, as described in the previous section).</p>
+<pre><code>$ conda env create -f /library/software/conda_environments/BioPerl-1.7.2/BioPerl-1.7.2.yml
+Collecting package metadata (repodata.json): done
+Solving environment: done
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate bioperl-1.7.2
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+$ conda activate bioperl-1.7.2
+$ which perl
+~/miniconda3/envs/bioperl-1.7.2/bin/perl
+$ perl -E 'use DateTime; say "Success!"'
+Can't locate DateTime.pm in @INC (you may need to install the DateTime module) (@INC contains: /homes/hyweldd/miniconda3/envs/bioperl-1.7.2/lib/site_perl/5.26.2/x86_64-linux-thread-multi /homes/hyweldd/miniconda3/envs/bioperl-1.7.2/lib/site_perl/5.26.2 /homes/hyweldd/miniconda3/envs/bioperl-1.7.2/lib/5.26.2/x86_64-linux-thread-multi /homes/hyweldd/miniconda3/envs/bioperl-1.7.2/lib/5.26.2 .) at -e line 1.
+BEGIN failed--compilation aborted at -e line 1.
+$ conda search perl-datetime
+Loading channels: done
+# Name                       Version           Build  Channel
+perl-datetime                   1.42      pl5.22.0_0  bioconda
+perl-datetime                   1.42 pl526h2d50403_2  bioconda
+$ conda install perl-datetime
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+    
+...
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+$ perl -E 'use DateTime; say "Success!"'
+Success!
+$ </code></pre>
+</section>
+<section id="managing-your-own-perl-installation-with-perlbrew" class="level4">
+<h4 class="anchored" data-anchor-id="managing-your-own-perl-installation-with-perlbrew">Managing your own perl installation with perlbrew</h4>
+<p>To use <code>perlbrew</code>, you must first install it into your home directory. Once this is done, you can use the <code>perlbrew</code> command to install <code>perl</code> versions and download packages from CPAN for each version. The following example walks through the process of installing <code>perlbrew</code>, using it to install <code>perl 5.32.1</code>, and installing the DateTime package from CPAN using the <code>cpan</code> command. Further information on <code>perlbrew</code> can be found at <a href="https://perlbrew.pl/">https://perlbrew.pl</a>.</p>
+<pre><code>$ curl -L https://install.perlbrew.pl | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   170  100   170    0     0    168      0  0:00:01  0:00:01 --:--:--   168
+100  1574  100  1574    0     0   1263      0  0:00:01  0:00:01 --:--:--  1263
+
+## Download the latest perlbrew
+
+## Installing perlbrew
+Using Perl &lt;/usr/bin/perl&gt;
+perlbrew is installed: ~/perl5/perlbrew/bin/perlbrew
+
+perlbrew root (~/perl5/perlbrew) is initialized.
+
+Append the following piece of code to the end of your ~/.bash_profile and start a
+new shell, perlbrew should be up and fully functional from there:
+
+    source ~/perl5/perlbrew/etc/bashrc
+
+Simply run `perlbrew` for usage details.
+
+Happy brewing!
+
+## Installing patchperl
+
+## Done.
+$ echo 'source ~/perl5/perlbrew/etc/bashrc' &gt;&gt; ~/.bash_profile
+$ source ~/.bash_profile
+$ which perlbrew
+~/perl5/perlbrew/bin/perlbrew
+$ perlbrew --notest install 5.32.1
+Installing /homes/hyweldd/perl5/perlbrew/build/perl-5.32.1/perl-5.32.1 into ~/perl5/perlbrew/perls/perl-5.32.1
+
+This could take a while. You can run the following command on another shell to track the status:
+
+  tail -f ~/perl5/perlbrew/build.perl-5.32.1.log
+
+perl-5.32.1 is successfully installed.
+$ perlbrew use 5.32.1
+$ cpan DateTime
+Loading internal logger. Log::Log4perl recommended for better logging
+Reading '/homes/hyweldd/.cpan/Metadata'
+  Database was generated on Fri, 04 Jun 2021 20:55:40 GMT
+Running install for module 'DateTime'
+Fetching with HTTP::Tiny:
+http://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-1.54.tar.gz
+
+...
+
+  DROLSKY/DateTime-1.54.tar.gz
+  /usr/bin/make install  -- OK
+$ perlbrew list-modules
+
+...
+
+DateTime
+
+...
+
+$ which perl
+~/perl5/perlbrew/perls/perl-5.32.1/bin/perl
+$ perl -v | grep version
+This is perl 5, version 32, subversion 1 (v5.32.1) built for x86_64-linux
+$ perl -E 'use DateTime; say "Success!"'
+Success!
+$ </code></pre>
+<p><em>Note:</em> Due to the way the network is set up, installing BioPerl on bifx-core requires the <code>NO_NETWORK_TESTING</code> environment variable to be set, so the correct cpan command for installing BioPerl would be:</p>
+<pre><code>$ NO_NETWORK_TESTING=1 cpan BioPerl</code></pre>
+<p>For further information, see <a href="https://github.com/libwww-perl/libwww-perl/issues/370" class="uri">https://github.com/libwww-perl/libwww-perl/issues/370</a>.</p>
+<hr>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "DRP-HCB-Bioinformatics"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: training.qmd
+        text: "Training"
+      - href: best_practices.qmd
+        text: "Best Practices"
+      #- href: resources.qmd
+      #  text: "Resources"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    link-external-newwindow: true
+
+editor: visual
+

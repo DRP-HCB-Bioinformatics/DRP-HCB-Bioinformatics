@@ -1,0 +1,11 @@
+---
+title: "Best Practices"
+---
+
+This page contains a list of best practice documents for managing bioinformatics projects and working on the WCB servers.
+
+-   [Accessing bioinformatics servers and user policy](user_policy.html)
+
+-   [Running and managing software on bifx-core servers](software.html)
+
+-   [Customising your command line experience](customising.html)

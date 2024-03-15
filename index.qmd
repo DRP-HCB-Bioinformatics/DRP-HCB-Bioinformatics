@@ -1,0 +1,19 @@
+---
+title: "DRP-HCB-Bioinformatics"
+---
+
+This is the homepage for users of the Bioinformatics Core at the Discovery Research Platform for Hidden Cell Biology at the University of Edinburgh.
+
+<br>
+
+![](images/DRP_logo_horizontal_transparent.png)
+
+<br>
+
+You will find details on how to access the servers, introductory training course, best-practice documentation for using our in house servers and other useful resources.
+
+For more information on how to access or collaborate with the Bioinformatics Core, please see the DRP-HCB website.
+
+------------------------------------------------------------------------
+
+For more information contact [Shaun Webb](mailto:shaun.webb@ed.ac.uk).
