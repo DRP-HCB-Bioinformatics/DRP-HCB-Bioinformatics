@@ -8,4 +8,8 @@ This page contains a list of best practice documents for managing bioinformatics
 
 -   [Running and managing software on bifx-core servers](software.html)
 
+-   [Bioinformatics workflow management tools](workflows.html)
+
 -   [Customising your command line experience](customising.html)
+
+-   [Downloading sequencing data](downloading.html)

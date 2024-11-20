@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DRP-HCB-Bioinformatics - Customising your command line experience</title>
+<title>DRP-HCB-Bioinformatics - downloading</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,10 +116,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#ssh-keys---logging-in-without-a-password" id="toc-ssh-keys---logging-in-without-a-password" class="nav-link active" data-scroll-target="#ssh-keys---logging-in-without-a-password">SSH Keys - logging in without a password</a></li>
-  <li><a href="#bash-configuration" id="toc-bash-configuration" class="nav-link" data-scroll-target="#bash-configuration">Bash configuration</a></li>
-  <li><a href="#htop" id="toc-htop" class="nav-link" data-scroll-target="#htop">htop</a></li>
-  <li><a href="#tmux---terminal-multiplexer" id="toc-tmux---terminal-multiplexer" class="nav-link" data-scroll-target="#tmux---terminal-multiplexer">TMUX - Terminal multiplexer</a></li>
+  <li><a href="#downloading-sequencing-data" id="toc-downloading-sequencing-data" class="nav-link active" data-scroll-target="#downloading-sequencing-data">Downloading sequencing data</a></li>
   </ul>
 </nav>
     </div>
@@ -128,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Customising your command line experience</h1>
+<h1 class="title">downloading</h1>
 </div>
 
 
@@ -145,74 +142,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="ssh-keys---logging-in-without-a-password" class="level2">
-<h2 class="anchored" data-anchor-id="ssh-keys---logging-in-without-a-password">SSH Keys - logging in without a password</h2>
-<p>An SSH key is an access credential, similar to a username/password that grants access to the server from a remote computer. You can set up ssh keys between your computer and the server to enable password-less login.</p>
-<p>Firstly create ssh key pairs (public and private) on your own machine (UNIX or Mac terminal):</p>
-<p><code>ssh-keygen</code></p>
-<p>This will ask for a pass-phrase. Just hit enter if you want to avoid entering this every time you login. You should use a pass-phrase if you need to protect your ssh keys from any who may have access to your computer.</p>
-<p>Next, copy the public key to the server:</p>
-<p><code>ssh-copy-id username@bifx-core3.bio.ed.ac.uk</code></p>
-<p>The next time you connect to the server, the SSH protocol will send a message to your computer and attempt to decrypt it with your private key. If it gets the expected response it will authenticate your connection:</p>
-<p><code>ssh username@bifx-core3.bio.ed.ac.uk</code></p>
-<p>Further information:</p>
+<section id="downloading-sequencing-data" class="level2">
+<h2 class="anchored" data-anchor-id="downloading-sequencing-data">Downloading sequencing data</h2>
+<p><a href="https://www.youtube.com/watch?v=fAaVzhD7DOU&amp;ab_channel=WCBbioinformatics" class="uri">https://www.youtube.com/watch?v=fAaVzhD7DOU&amp;ab_channel=WCBbioinformatics</a></p>
+<p><a href="https://docs.google.com/presentation/d/12CJ-8CQSryc3K72kok3BHpw-rxTOv2pN06GJF2FP4xE/edit?usp=sharing" class="uri">https://docs.google.com/presentation/d/12CJ-8CQSryc3K72kok3BHpw-rxTOv2pN06GJF2FP4xE/edit?usp=sharing</a></p>
+<section id="published-data-repositories" class="level3">
+<h3 class="anchored" data-anchor-id="published-data-repositories">Published data repositories</h3>
+<p>Published sequencing data is deposited online in</p>
 <ul>
-<li><p><a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys">How to set up SSH keys</a></p></li>
-<li><p><a href="https://phoenixnap.com/kb/generate-ssh-key-windows-10">Setting up SSH keys on Windows</a></p></li>
-</ul>
-</section>
-<section id="bash-configuration" class="level2">
-<h2 class="anchored" data-anchor-id="bash-configuration">Bash configuration</h2>
-<p>Coming soon…</p>
-</section>
-<section id="htop" class="level2">
-<h2 class="anchored" data-anchor-id="htop">htop</h2>
-<p><code>htop</code> is a modified version of <code>top</code> for interactive system monitoring. It provides an overview of CPU and memory usage as well as running jobs on the server. You can find out more about how to use <code>htop</code> here: <a href="https://www.tecmint.com/htop-linux-process-monitoring/" class="uri">https://www.tecmint.com/htop-linux-process-monitoring/</a></p>
-<p>By default <code>htop</code> will show the usage of each CPU on the machine. Because we have a lot of CPU’s this takes up the entire display making it very difficult to navigate. We recommend editing your htop configuration file <code>~/.config/htop/htopr</code> to the parameters below. This will reduce the CPU usage to a single bar showing average usage and allow you to use htop as intended!</p>
-<pre><code># Beware! This file is rewritten by htop when settings are changed in the interface.
-# The parser is also very primitive, and not human-friendly.
-fields=0 48 17 18 38 39 40 2 46 47 49 1
-sort_key=46
-sort_direction=1
-hide_threads=0
-hide_kernel_threads=0
-hide_userland_threads=0
-shadow_other_users=0
-show_thread_names=0
-show_program_path=1
-highlight_base_name=0
-highlight_megabytes=0
-highlight_threads=1
-tree_view=0
-header_margin=0
-detailed_cpu_time=0
-cpu_count_from_zero=0
-update_process_names=0
-account_guest_in_cpu_meter=0
-color_scheme=0
-delay=15
-left_meters=CPU Memory Swap
-left_meter_modes=1 1 1
-right_meters=CPU Tasks LoadAverage Uptime
-right_meter_modes=1 2 2 2</code></pre>
-</section>
-<section id="tmux---terminal-multiplexer" class="level2">
-<h2 class="anchored" data-anchor-id="tmux---terminal-multiplexer">TMUX - Terminal multiplexer</h2>
-<p><strong>TMUX</strong>, the terminal multiplexer, is a program that allows you to manage persistent server sessions and easily switch between programs in one terminal session.</p>
+<li><p>SRA (Sequence Read Archive)</p>
 <ul>
-<li><p>“Detached” <strong>sessions</strong> that continue to run when you close your connection to the server.</p></li>
-<li><p>Manage multiple sessions.</p></li>
-<li><p>Split sessions into <strong>windows</strong> and <strong>panes.</strong></p></li>
-</ul>
-<p>Further resources:</p>
+<li><p>The SRA is a repository for raw sequencing data.</p></li>
+<li><p>Smaller datasets and metadata can be downloaded online.</p></li>
+<li><p>Other download options</p>
 <ul>
-<li><p><a href="https://tmuxcheatsheet.com/">tmux cheatsheet</a></p></li>
-<li><p><a href="https://github.com/tmux/tmux/wiki">tmux wiki</a></p></li>
+<li><p><a href="https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/" class="uri">https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/</a></p></li>
+<li><p>SRA Toolkit (see below)</p></li>
+<li><p>Cloud access</p></li>
+</ul></li>
+</ul></li>
+<li><p>GEO (Gene Expression Omnibus)</p>
+<ul>
+<li><p>GEO is a repository for published datasets which must include processed data e.g bigWig read profiles, ChIP-seq peak files, RNA-seq read count tables.</p>
+<ul>
+<li><p>Download links are available at the bottom of each GEO submission.</p></li>
+<li><p>To download to the server</p>
+<ul>
+<li><p>Right click to “Copy link as”</p></li>
+<li><p>Use <code>wget</code> or <code>curl</code> on the command line to download using the URL</p></li>
+</ul></li>
+</ul></li>
+<li><p>GEO submissions also include links to SRA for raw sequencing files.</p></li>
+</ul></li>
+<li><p>ENA (European Nucleotide Archive)</p>
+<ul>
+<li><p>ENA is repository for sequencing data hosted by the European Bioinformatics Institute.</p></li>
+<li><p>To download raw sequencing files from a project:</p>
+<ul>
+<li><p>Select the fastq files you require.</p></li>
+<li><p>Hit the “Get Download Script” button.</p></li>
+<li><p>Run the script on the terminal command line on your computer or on the server.</p></li>
+<li><p>e.g.&nbsp;<code>sh ena-file-download-read-run-PRJNA112117-fastq_ftp-20240623-919.sh</code></p></li>
+</ul></li>
+</ul></li>
 </ul>
-<p><img src="images/tmux-panes.png" title="tmux-panes" class="img-fluid" width="500"></p>
-<p><img src="images/tmux.png" title="tmux" class="img-fluid" width="500"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Screenshot 2024-06-25 at 10.20.17.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<section id="sra-toolkit" class="level4">
+<h4 class="anchored" data-anchor-id="sra-toolkit">SRA Toolkit</h4>
+</section>
+<section id="sra-explorer" class="level4">
+<h4 class="anchored" data-anchor-id="sra-explorer">SRA Explorer</h4>
+</section>
+<section id="fetchngs" class="level4">
+<h4 class="anchored" data-anchor-id="fetchngs">FetchNGS</h4>
+</section>
+</section>
+<section id="new-data" class="level3">
+<h3 class="anchored" data-anchor-id="new-data">New data</h3>
+<section id="illumina-basespace" class="level4">
+<h4 class="anchored" data-anchor-id="illumina-basespace">Illumina Basespace</h4>
+</section>
+<section id="edinburgh-genomics" class="level4">
+<h4 class="anchored" data-anchor-id="edinburgh-genomics">Edinburgh Genomics</h4>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
