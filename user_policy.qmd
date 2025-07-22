@@ -26,7 +26,7 @@ Once your account is active, the following servers can be accessed over the univ
     -   512Gb RAM
     -   32 dual CPU cores
     -   Command line usage (ssh)
-    -   R-Studio: <http://bifx-core2.bio.ed.ac.uk:8787/>
+    -   R-Studio: <https://rstudio-core2.bio.ed.ac.uk/>
     -   R-Shiny: <http://bifx-core2.bio.ed.ac.uk:3838/>
     -   Apache web server
 
@@ -35,7 +35,7 @@ Once your account is active, the following servers can be accessed over the univ
     -   1Tb RAM
     -   128 dual CPU cores
     -   Command line usage (ssh)
-    -   R-Studio: <https://bifx-rstudio.bio.ed.ac.uk/>
+    -   R-Studio: <https://rstudio-core3.bio.ed.ac.uk/>
     -   R-Shiny: <http://bifx-core3.bio.ed.ac.uk:3838/>
     -   Jupyter Hub: <http://bifx-core3.bio.ed.ac.uk:8888/>
     -   Apache web server
