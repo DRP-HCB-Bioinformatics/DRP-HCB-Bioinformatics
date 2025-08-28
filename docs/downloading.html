@@ -152,8 +152,22 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>SRA (Sequence Read Archive)</p>
 <ul>
-<li><p>The SRA is a repository for raw sequencing data.</p></li>
-<li><p>Smaller datasets and metadata can be downloaded online.</p></li>
+<li><p>The SRA is a repository for raw sequencing data</p>
+<ul>
+<li>Long and short reads from any platform (Illumina, PacBio..)</li>
+</ul></li>
+<li><p>Organised with unique identifiers</p>
+<ul>
+<li><p>SRP = Project/Study (1 or more samples )</p></li>
+<li><p>SRS = Sample (1 or more experiments)</p></li>
+<li><p>SRX = Experiment (1 or more runs i.e technical replicates)</p></li>
+<li><p>SRR = Run (results for 1 sequencing run)</p></li>
+</ul></li>
+<li><p>Runs stored in <em>sra</em> format</p>
+<ul>
+<li>Reads saved in <em>spots</em></li>
+</ul></li>
+<li><p>Smaller datasets and metadata can be downloaded via links in each run</p></li>
 <li><p>Other download options</p>
 <ul>
 <li><p><a href="https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/" class="uri">https://www.ncbi.nlm.nih.gov/sra/docs/sradownload/</a></p></li>
@@ -163,16 +177,27 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>GEO (Gene Expression Omnibus)</p>
 <ul>
-<li><p>GEO is a repository for published datasets which must include processed data e.g bigWig read profiles, ChIP-seq peak files, RNA-seq read count tables.</p>
+<li><p>Genomics data repository for high throughput experiments</p>
 <ul>
-<li><p>Download links are available at the bottom of each GEO submission.</p></li>
+<li><p>Experimental metadata</p></li>
+<li><p>Processed data e.g bigWig read profiles, ChIP-seq peak files, RNA-seq read count tables</p></li>
+<li><p>Links to raw data (SRA)</p></li>
+<li><p>Links to publication</p></li>
+</ul></li>
+<li><p>Data organised into</p>
+<ul>
+<li><p>Series and super series (GSE)</p></li>
+<li><p>Samples (GSM)</p></li>
+</ul></li>
+<li><p>Most publications will contain a GEO series ID.</p></li>
+<li><p>Download links are available at the bottom of each GEO submission.</p>
+<ul>
 <li><p>To download to the server</p>
 <ul>
 <li><p>Right click to “Copy link as”</p></li>
 <li><p>Use <code>wget</code> or <code>curl</code> on the command line to download using the URL</p></li>
 </ul></li>
 </ul></li>
-<li><p>GEO submissions also include links to SRA for raw sequencing files.</p></li>
 </ul></li>
 <li><p>ENA (European Nucleotide Archive)</p>
 <ul>
@@ -193,6 +218,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="sra-toolkit" class="level4">
 <h4 class="anchored" data-anchor-id="sra-toolkit">SRA Toolkit</h4>
+<p><a href="https://github.com/ncbi/sra-tools/wiki/08.-prefetch-and-fasterq-dump" class="uri">https://github.com/ncbi/sra-tools/wiki/08.-prefetch-and-fasterq-dump</a></p>
 </section>
 <section id="sra-explorer" class="level4">
 <h4 class="anchored" data-anchor-id="sra-explorer">SRA Explorer</h4>

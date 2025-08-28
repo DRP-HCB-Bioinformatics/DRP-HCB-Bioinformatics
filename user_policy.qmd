@@ -60,7 +60,7 @@ If you prefer to use a graphical interface the servers can be accessed via X2Go 
 
 ### R and RStudio
 
--   RStudio on bifx-core3 can be accessed at <https://bifx-rstudio.bio.ed.ac.uk>
+-   RStudio on bifx-core3 can be accessed at <https://rstudio-core3.bio.ed.ac.uk/>
 
 -   A Shiny server is available on the university network only at <http://bifx-core3.bio.ed.ac.uk:3838>
 

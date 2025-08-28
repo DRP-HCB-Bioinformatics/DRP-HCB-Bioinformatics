@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DRP-HCB-Bioinformatics - Bioinformatics servers and user policy</title>
+<title>DRP-HCB-Bioinformatics - Bioinformatics workflow management tools</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -115,20 +115,8 @@ ul.task-list li input[type="checkbox"] {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#bioinformatics-servers" id="toc-bioinformatics-servers" class="nav-link active" data-scroll-target="#bioinformatics-servers">Bioinformatics Servers</a></li>
-  <li><a href="#server-access" id="toc-server-access" class="nav-link" data-scroll-target="#server-access">Server access</a>
   <ul class="collapse">
-  <li><a href="#r-and-rstudio" id="toc-r-and-rstudio" class="nav-link" data-scroll-target="#r-and-rstudio">R and RStudio</a></li>
-  <li><a href="#jupyter-hub" id="toc-jupyter-hub" class="nav-link" data-scroll-target="#jupyter-hub">Jupyter Hub</a></li>
-  <li><a href="#web-server" id="toc-web-server" class="nav-link" data-scroll-target="#web-server">Web server</a></li>
-  </ul></li>
-  <li><a href="#data-policy" id="toc-data-policy" class="nav-link" data-scroll-target="#data-policy">Data policy</a></li>
-  <li><a href="#data-management" id="toc-data-management" class="nav-link" data-scroll-target="#data-management">Data management</a></li>
-  <li><a href="#server-usage" id="toc-server-usage" class="nav-link" data-scroll-target="#server-usage">Server usage</a></li>
-  <li><a href="#software-and-updates" id="toc-software-and-updates" class="nav-link" data-scroll-target="#software-and-updates">Software and updates</a></li>
-  <li><a href="#storage-and-backups" id="toc-storage-and-backups" class="nav-link" data-scroll-target="#storage-and-backups">Storage and Backups</a></li>
-  <li><a href="#mailing-list" id="toc-mailing-list" class="nav-link" data-scroll-target="#mailing-list">Mailing list</a></li>
+  <li><a href="#nextflow-and-nf-core" id="toc-nextflow-and-nf-core" class="nav-link active" data-scroll-target="#nextflow-and-nf-core">Nextflow and nf-core</a></li>
   </ul>
 </nav>
     </div>
@@ -137,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bioinformatics servers and user policy</h1>
+<h1 class="title">Bioinformatics workflow management tools</h1>
 </div>
 
 
@@ -154,162 +142,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bioinformatics-servers" class="level2">
-<h2 class="anchored" data-anchor-id="bioinformatics-servers">Bioinformatics Servers</h2>
-<p>These servers are funded by the Wellcome Trust and are managed by the DRP-HCB bioinformatics core.</p>
-<p>Accounts are limited to users with active DRP-HCB projects. To request an account please contact the bioinformatics core.</p>
-<p>Once your account is active, the following servers can be accessed over the university network or via the <a href="https://www.ed.ac.uk/information-services/computing/desktop-personal/vpn">VPN service</a> by logging in with your EASE credentials.</p>
-<ul>
-<li><p>bifx-core1.bio.ed.ac.uk</p>
-<ul>
-<li>512Gb RAM</li>
-<li>128 dual CPU cores</li>
-<li>Command line usage (ssh)</li>
-<li>37Tb scratch space at /scratch</li>
-</ul></li>
-<li><p>bifx-core2.bio.ed.ac.uk</p>
-<ul>
-<li>512Gb RAM</li>
-<li>32 dual CPU cores</li>
-<li>Command line usage (ssh)</li>
-<li>R-Studio: <a href="https://rstudio-core2.bio.ed.ac.uk/" class="uri">https://rstudio-core2.bio.ed.ac.uk/</a></li>
-<li>R-Shiny: <a href="http://bifx-core2.bio.ed.ac.uk:3838/" class="uri">http://bifx-core2.bio.ed.ac.uk:3838/</a></li>
-<li>Apache web server</li>
-</ul></li>
-<li><p>bifx-core3.bio.ed.ac.uk</p>
-<ul>
-<li>1Tb RAM</li>
-<li>128 dual CPU cores</li>
-<li>Command line usage (ssh)</li>
-<li>R-Studio: <a href="https://rstudio-core3.bio.ed.ac.uk/" class="uri">https://rstudio-core3.bio.ed.ac.uk/</a></li>
-<li>R-Shiny: <a href="http://bifx-core3.bio.ed.ac.uk:3838/" class="uri">http://bifx-core3.bio.ed.ac.uk:3838/</a></li>
-<li>Jupyter Hub: <a href="http://bifx-core3.bio.ed.ac.uk:8888/" class="uri">http://bifx-core3.bio.ed.ac.uk:8888/</a></li>
-<li>Apache web server</li>
-</ul></li>
-</ul>
+<p>We use two main tools for managing bioinformatics workflows: Snakemake and Nextflow. These tools allow you to define complex workflows in a simple and reproducible way, making it easy to run and share your analyses.</p>
+<p><strong>Nextflow</strong> is a workflow manager that enables the development of portable and reproducible workflows. Nextflow takes care of managing the execution of the processes and the flow of data between them, making it easy to develop and run complex workflows. The <strong>nf-core</strong> project provides a collection of curated Nextflow pipelines for bioinformatics analysis. These pipelines are designed to be easy to use, scalable, and reproducible.</p>
+<p><strong>Snakemake</strong> is a workflow management system that allows you to define workflows in a simple and readable way using a Python-like syntax. Snakemake automatically determines the order of execution of the rules based on the input and output files, making it easy to parallelize and optimize your workflows. Snakemake is particularly well-suited for bioinformatics workflows, as it integrates seamlessly with popular bioinformatics tools and languages. Snakemake is a good choice for smaller, more focused workflows that do not require the full power of Nextflow. It has a lower learning curve and is easier to get started with.</p>
+<section id="nextflow-and-nf-core" class="level2">
+<h2 class="anchored" data-anchor-id="nextflow-and-nf-core">Nextflow and nf-core</h2>
+<p>Nextflow is a workflow manager that enables the development of portable and reproducible workflows. Nextflow takes care of managing the execution of the processes and the flow of data between them, making it easy to develop and run complex workflows.</p>
+<section id="install-nextflow" class="level3">
+<h3 class="anchored" data-anchor-id="install-nextflow">Install Nextflow</h3>
+<pre class="{bash}"><code>
+#| eval: false
+
+## Install sdk to manage Java
+curl -s https://get.sdkman.io | bash
+## Log out, then log in again
+## Install java
+sdk install java
+
+## Install Nextflow
+curl -s https://get.nextflow.io | bash
+chmod +x nextflow
+mkdir -p $HOME/.local/bin/
+mv nextflow $HOME/.local/bin/
+
+## Confirm install
+nextflow info
+</code></pre>
+<p>To update the version of nextflow:</p>
+<pre class="{bash}"><code>#| eval: false
+nextflow self-update</code></pre>
+<p>You can also temporarily switch to a specific version of Nextflow with the NXF_VER environment variable. For example:</p>
+<pre class="{bash}"><code>#| eval: false
+
+NXF_VER=23.10.0 nextflow info</code></pre>
+<p>You can also use NXF_VER to temporarily switch to any edge release. For example:</p>
+<pre class="{bash}"><code>#| eval: false
+
+NXF_VER=24.06.0-edge nextflow info</code></pre>
 </section>
-<section id="server-access" class="level2">
-<h2 class="anchored" data-anchor-id="server-access">Server access</h2>
-<p>For command line access, use the ssh command from a Terminal application in Windows, MacOS and Linux e.g.</p>
-<ul>
-<li><code>ssh -Y username@bifx-core1.bio.ed.ac.uk</code></li>
-</ul>
-<p>If you prefer to use a graphical interface the servers can be accessed via X2Go or with the Windows Remote Desktop application.</p>
-<ul>
-<li><p>X2Go</p>
-<ul>
-<li><a href="https://wiki.x2go.org/doku.php/doc:installation:start">Download the X2Go client</a></li>
-</ul></li>
-<li><p>Remote Desktop</p>
-<ul>
-<li><p>Pre-installed on Windows</p></li>
-<li><p><a href="https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12">Download for Mac from the App store</a></p></li>
-</ul></li>
-</ul>
-<section id="r-and-rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="r-and-rstudio">R and RStudio</h3>
-<ul>
-<li><p>RStudio on bifx-core3 can be accessed at <a href="https://rstudio-core3.bio.ed.ac.uk/" class="uri">https://rstudio-core3.bio.ed.ac.uk/</a></p></li>
-<li><p>A Shiny server is available on the university network only at <a href="http://bifx-core3.bio.ed.ac.uk:3838" class="uri">http://bifx-core3.bio.ed.ac.uk:3838</a></p>
-<ul>
-<li><p>Add your own Shiny Apps to a <code>ShinyApps</code> folder in your home directory.</p></li>
-<li><p>Launch these from http://bifx-core3.bio.ed.ac.uk:3838/username/</p></li>
-</ul></li>
-</ul>
+<section id="nf-core" class="level3">
+<h3 class="anchored" data-anchor-id="nf-core">nf-core</h3>
+<p>nf-core is a community-driven collection of Nextflow pipelines for bioinformatics. These pipelines are curated and developed by the community, and are designed to be easy to use, scalable, and reproducible. You can find a list of available pipelines at <a href="https://nf-co.re/">nf-co.re</a>.</p>
+<p>To install a pipeline from NF-Core, you can use the <code>nextflow pull</code> command. For example, to install the nf-core/rnaseq pipeline:</p>
+<pre class="{bash}"><code>#| eval: false
+#| tag: nf-core
+#| file: nf-core
+
+nextflow pull nf-core/rnaseq</code></pre>
+<p>You can then run the pipeline with the following command:</p>
+<pre class="{bash}"><code>#| eval: false
+
+nextflow run nf-core/rnaseq --input samplesheet.csv --genome GRCh38</code></pre>
+<p>See the nf-core documentation for more information on how to run pipelines.</p>
 </section>
-<section id="jupyter-hub" class="level3">
-<h3 class="anchored" data-anchor-id="jupyter-hub">Jupyter Hub</h3>
-<ul>
-<li>Jupyter Hub on bifx-core3 can be accessed at <a href="https://bifx-core3.bio.ed.ac.uk:8888" class="uri">https://bifx-core3.bio.ed.ac.uk:8888</a></li>
-</ul>
-</section>
-<section id="web-server" class="level3">
-<h3 class="anchored" data-anchor-id="web-server">Web server</h3>
-<p>Data on the server can be accessed over the web (e.g.&nbsp;files, images, html documents, IGV/UCSC tracks). Please contact us for details on how to set this up.</p>
-</section>
-</section>
-<section id="data-policy" class="level2">
-<h2 class="anchored" data-anchor-id="data-policy">Data policy</h2>
-<ul>
-<li><p>No personal data should be stored on the bifx-core servers. All data should be related to projects associated with the DRP unless dispensation has been given.</p></li>
-<li><p>All data on the bifx-core servers can be viewed by members of the bioinformatics core or the DRP-HCB director.</p></li>
-<li><p>As the bioinformatics core team have superuser permissions, we can see all data on the server. Instructions on how to access the servers are lodged with the DRP-HCB director in case of emergency. Therefore they are a de-facto administrator.</p></li>
-<li><p>Your data can be accessed by your PI on request. No request is needed if the PI has an account on the server and can view your files. Data stored on the servers should only relate to active DRP-HCB projects submitted by the grant holder and therefore it is reasonable that they can access their own data.</p></li>
-<li><p>Users are responsible for their own data (see backup policy).</p></li>
-<li><p>By default, when you create a new file on the server it is created with the following permissions:</p>
-<ul>
-<li>Personal: read/write/execute</li>
-<li>Global/group: read</li>
-</ul></li>
-<li><p>This means that only you can change, delete or execute the new file, but anyone logged in to the server can view it. If you would like to change the permissions on a file you can use the <code>chmod</code> command. Further details on how to do this can be found by reviewing our introduction to linux course.</p></li>
-</ul>
-</section>
-<section id="data-management" class="level2">
-<h2 class="anchored" data-anchor-id="data-management">Data management</h2>
-<ul>
-<li><p>Users should have a data management plan for their projects. Please see <a href="https://uoe.sharepoint.com/:w:/s/wcbbioinformatics/EQAVC1KoHmtBrA6rUOasQcIBisBh2fIQ3gBp7XA_3zWlxQ?e=c2xMbY">this document</a> for advice.</p></li>
-<li><p>Users should endeavour to minimise disk usage by removing unnecessary files and compressing files where appropriate.</p></li>
-<li><p>Completed projects should be archived with metadata and code to ensure reproducibility.</p></li>
-<li><p>Before you leave the university, please ensure all required data is accessible to your group.</p></li>
-<li><p>Group folders exist on the bifx-core servers at /groups. These can be used for shared data and for archiving old projects/accounts.</p></li>
-<li><p>Please follow our recommended <a href="best_practices.html">best practices</a> for working on the bifx-core servers. This web page will be updated regularly.</p></li>
-</ul>
-</section>
-<section id="server-usage" class="level2">
-<h2 class="anchored" data-anchor-id="server-usage">Server usage</h2>
-<ul>
-<li><p>All users must complete our <a href="http://bifx-core3.bio.ed.ac.uk/hyweldd/training/Bioinformatics_on_the_Command_Line/">introduction to linux</a> course, either in their own time or by attending one of our workshops.</p></li>
-<li><p>The bifx-core servers are a shared environment and users are responsible for ensuring their jobs do not overwhelm computing resources. The servers can cope with high memory usage and multi-threading, however they will slow down when there is a high number of read/write operations.</p>
-<ul>
-<li><p>Limit simultaneous jobs with large read/write requirements (e.g.&nbsp;genome alignment).</p></li>
-<li><p>Do not set multi-threaded jobs to use the majority of CPUs.</p></li>
-</ul></li>
-<li><p>In particular, users should be aware of Unix commands to monitor their jobs and avoid overuse of computing resources, e.g:</p>
-<ul>
-<li><code>ps / pgrep</code></li>
-<li><code>top / htop</code></li>
-<li><code>nice</code></li>
-<li><code>kill</code></li>
-</ul></li>
-<li><p>Use the scratch space in <code>/scratch</code> to speed up analyses/downloads/uploads. This is local disk space which will respond quicker. However, it is <strong>NOT BACKED UP</strong> and should be used as temporary storage only. All key datasets should be transferred to your home space.</p></li>
-</ul>
-</section>
-<section id="software-and-updates" class="level2">
-<h2 class="anchored" data-anchor-id="software-and-updates">Software and updates</h2>
-<ul>
-<li><p>The bioinformatics core will regularly maintain software and perform updates. We will strive to provide adequate warning when updates may cause interruption. All communication will be broadcast via the bifx-users mailing list (see below).</p></li>
-<li><p>Details on version control of bioinformatics software and maintaining your own packages are available in our <a href="best_practices.html">best practices</a> section.</p></li>
-</ul>
-</section>
-<section id="storage-and-backups" class="level2">
-<h2 class="anchored" data-anchor-id="storage-and-backups">Storage and Backups</h2>
-<ul>
-<li><p>Data saved in home directories is stored on the University of Edinburgh DataStore service. Two backup systems exist:</p>
-<ul>
-<li>Daily ‘snapshots’ kept for two weeks to allow users to restore data.</li>
-<li>Daily tape backups kept for sixty days in case of total data loss.</li>
-</ul></li>
-<li><p>Data in <code>/scratch</code> directories is not backed up. This disk space is provided to speed up analysis but output files should be copied back to your home directory. Please remove data from /scratch regularly to free up space for other users. Old data may be periodically removed by the bioinformatics core facility to free up space.</p></li>
-<li><p>We recommend that users keep additional backups of key datasets e.g:</p>
-<ul>
-<li><p>Personal copies on encrypted external HDD.</p>
-<ul>
-<li>See <a href="https://www.ed.ac.uk/infosec/how-to-protect/encrypting">here</a> for university advice on encrypting devices.</li>
-</ul></li>
-<li><p>Online research data repositories e.g.</p>
-<ul>
-<li><p>Sequence repositories (GEO, SRA, ArrayExpress)</p></li>
-<li><p><a href="https://zenodo.org/">Zenodo</a></p></li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="mailing-list" class="level2">
-<h2 class="anchored" data-anchor-id="mailing-list">Mailing list</h2>
-<p>For announcements regarding server issues and updates, please join our mailing list. To join, send an email with no subject line to the following address: <a href="mailto:sympa@mlist.is.ed.ac.uk" class="email">sympa@mlist.is.ed.ac.uk</a></p>
-<p>Include the following 2 lines of text (replacing FIRSTNAME and LASTNAME with your own first name and surname) SUBSCRIBE <a href="mailto:bifx-users@mlist.is.ed.ac.uk" class="email">bifx-users@mlist.is.ed.ac.uk</a> FIRSTNAME LASTNAME QUIT</p>
+<section id="nf-core-tools" class="level3">
+<h3 class="anchored" data-anchor-id="nf-core-tools">nf-core tools</h3>
+<p>NF-Core also provides a set of tools to help you manage your Nextflow pipelines. You can install these tools with conda:</p>
+<pre class="{bash}"><code>#| eval: false
+
+## Install with conda
+conda install -c bioconda nf-core</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
