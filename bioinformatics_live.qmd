@@ -1,0 +1,271 @@
+---
+title: "Bioinformatics Live"
+---
+
+Bioinformatics Live is our series of demonstrations focusing on specific applications of bioinformatics, data analysis and programming. The aim of these sessions is to share knowledge, develop skills and create a network of computational biologists.
+
+You can find the schedule below as well as links to previous talks. We are always keen to have new speakers so please get in touch if you are interested!
+
+### Upcoming
+
+Coming soon in 2026.
+
+### Completed
+
+#### **Shiny: Interactive apps for exploratory data analysis**
+
+-   [Presentation slides](https://docs.google.com/presentation/d/1qYye9iWty6flrjcqqgc-wwH08gIbrwalcubx_z0fmFE/edit?usp=sharing)
+
+-   [Getting started with Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
+
+-   [Shiny gallery](https://shiny.posit.co/r/gallery/)
+
+-   GeneTonic RNA-seq Shiny App
+
+    -   <https://federicomarini.github.io/GeneTonic/articles/GeneTonic_manual.html>
+
+    -   <http://shiny.imbei.uni-mainz.de:3838/GeneTonic/>
+
+-   Shiny app deployment:
+
+    -   [Shinyapps IO](https://www.shinyapps.io/)
+
+    -   Hugging Face
+
+        -   <https://huggingface.co/>
+
+        -   <https://huggingface.co/docs/hub/spaces-sdks-docker-shiny#shiny-for-r>
+
+#### **HiC visualisation**
+
+-   [Presentation slides](https://uoe-my.sharepoint.com/:p:/g/personal/swebb1_ed_ac_uk/Ead91ODqVJNHuQ454_435f8BTjVZM30Ss9qRic5WhioAlQ?e=2JRPcr)
+
+-   A brief overview of available tools for visualising HiC data.
+
+-   The pros and cons of different tools both for genome wide exploration and plotting at specific viewpoints.
+
+-   [HiGlass](https://higlass.io/) vs [Juicebox](https://www.aidenlab.org/juicebox/) for Genome wide heatmaps
+
+    -   What are the differences?
+
+-   Plotting with [HiCExplorer](https://hicexplorer.readthedocs.io/en/latest/) and [Cooltools](https://cooltools.readthedocs.io/en/latest/)
+
+#### **Simple Unix commands to enhance your command line experience:**
+
+-   [Presentation slides](https://docs.google.com/presentation/d/157U6XQoqcehqGXHKs6D847wwPaM3CUujml2f5dPMNmI/edit?usp=sharing)
+
+-   Input dataset and shell script: <https://bifx-core3.bio.ed.ac.uk/Shaun/Shaun/training/unix_tutorial/>
+
+-   Ensembl Biomart: <https://www.ensembl.org/info/data/biomart/index.html>
+
+-   Notes on regular expressions: <https://www.datacamp.com/cheat-sheet/regular-expresso>
+
+#### **Analysing HTS data with deepTools**
+
+-   [Presentation slides](https://docs.google.com/presentation/d/11TwobnfGEQkqSQ6_drh0gf5FRWTYcuCk78KHOXTxLGw/edit?usp=sharing)
+
+-   [DeepTools documentation](https://deeptools.readthedocs.io/en/stable/index.html)
+
+-   [ProfilePlyr](https://www.bioconductor.org/packages/release/bioc/vignettes/profileplyr/inst/doc/profileplyr.html): Importing deepTools objects into R
+
+-   Example [deepTools shell script](https://bifx-core3.bio.ed.ac.uk/Shaun/Shaun/deeptools/deepTools.sh) 
+
+-   Example [profilePlyr R script](https://bifx-core3.bio.ed.ac.uk/Shaun/Shaun/deeptools/profilePlyr.R)
+
+#### **Sharing and publishing completely reproducible data analyses​​​​​​​​​​​​​​**
+
+-   [Presentation slides](https://uoe-my.sharepoint.com/:p:/g/personal/swebb1_ed_ac_uk/ETB-ZQHEQ41HpByvRVKEEVkBg5kdVHfCzCc-8XJN90mtKQ?e=bcrZRW)
+
+-   Publishing raw data with [GEO](https://www.ncbi.nlm.nih.gov/geo/)
+
+-   Publishing scripts and workflows with [GitHub](https://github.com/)
+
+-   Using [Singularity](https://docs.sylabs.io/guides/3.5/user-guide/index.html) containers to reproduce computing environments and software dependencies
+
+-   Publishing software containers with [Zenodo](https://zenodo.org/) and linking to a GitHub release
+
+-   Downloading data and code to reproduce the analysis**​​​​​​​**
+
+-   Resources
+
+    -   Snakefile and Singularity definition file: <https://github.com/hyweldd/GSE230112_hyb>
+
+    -   GitHub repository snapshot on Zenodo: <https://zenodo.org/record/7875936>
+
+    -   Pre-print describing the experiment: <https://www.biorxiv.org/content/10.1101/2022.05.20.492787v1>
+
+    -   Singularity container in Zenodo (currently private): <https://zenodo.org/record/7875547>
+
+    -   GEO record for raw data (currently private): <https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE230112>
+
+#### **Building reproducible workflows with Snakemake**
+
+-   [Presentation slides](https://docs.google.com/presentation/d/1atUB26GZ5j_IldHm-b1az33PGNvw1j0azrFD3_gKOug/edit?usp=sharing)
+
+-   Introduction to workflow languages
+
+-   Why should I write workflows instead of bash scripts
+
+-   Snakemake workflows and rules
+
+-   Rule parameters and wildcards
+
+-   Running a workflow: Outputs and dry runs
+
+-   **Snakemake tutorial:** <https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html>
+
+#### **Fetching published sequencing data from GEO/SRA**
+
+-   Searching and exploring SRA (the Sequence Read Archive) <https://www.ncbi.nlm.nih.gov/sra>
+
+-   Searching published datasets in GEO (Gene Expression Omnibus) <https://www.ncbi.nlm.nih.gov/geo/>
+
+-   Downloading sequence files with sra-tools <https://github.com/ncbi/sra-tools>
+
+-   SRA explorer tool <https://sra-explorer.info/>
+
+-   ENA (European Nucleotide Archive) <https://www.ebi.ac.uk/ena/>
+
+-   **VIDEO:** [Fetching sequencing data from SRA](https://www.youtube.com/watch?v=fAaVzhD7DOU)
+
+#### **A tour of the Ensembl website and databases**
+
+The [Ensembl](https://www.ensembl.org/index.html) genome database is an online resource for genomic annotation, tools and visualisation:
+
+-   Genome assemblies for 300+ species
+
+-   Gene and transcript annotations
+
+    -   Gene/transcript centric data e.g. expression, proteins, homologues, variants
+
+-   Variation, regulation and comparative genomics data
+
+-   Analysis tools such as BLAST and the Variant Effect Predictor
+
+-   Data downloads via FTP, BioMart portal and programming APIs for R/Python/Perl
+
+-   Interactive genome browser
+
+-   **VIDEO:** [Quick guide to Ensembl](https://www.youtube.com/watch?v=JoJGg8xd0e0)
+
+-   **VIDEO:** [Ensembl virtual workshop playlist](https://www.youtube.com/playlist?list=PLqB8Yx1tGBMb8jn57vpEGIPh1RfTRqQko)
+
+-   **TUTORIAL:** [Ensembl training course](https://www.ebi.ac.uk/training/online/courses/ensembl-browsing-genomes/)
+
+#### **Analysing CUT&RUN sequencing data (Kashyap Chhatbar)**
+
+CUT&RUN ([Skene et al. 2017](https://doi.org/10.7554/eLife.21856)) is a method to analyse protein interactions with DNA. Unlike ChIP, which fragments and solubilizes total chromatin, CUT&RUN is performed in situ, allowing for both quantitative high-resolution chromatin mapping and probing of the local chromatin environment. Analysis steps are like ChIP-seq with a few additional steps. The talk will cover accelerated analysis using [NextFlow CUT&RUN pipeline](https://nf-co.re/cutandrun) to automate some of the steps below:
+
+-   Mapping sequencing reads to host and spike-in genomes
+
+-   Calculate normalization factor and generate spike-in normalized genome browser tracks for visualisation
+
+-   Analyse fragments by size
+
+-   Peak calling using sparse enrichment analysis algorithm SEACR ([Meers et al. 2019](https://doi.org/10.1186/s13072-019-0287-4))
+
+-   Generate summary plots and heatmaps
+
+#### **Genome browsers (IGV demonstration)**
+
+-   [Presentation slides](https://docs.google.com/presentation/d/1Avd-X6TnkITGeayfPPc4u7u3O6O4ojpNA3RMenFzl1M/edit?usp=sharing)
+
+-   Overview of commonly used genome browsers
+
+    -   Websites, servers, programming tools, desktop applications
+
+-   IGV demo
+
+    -   Loading data and genomes
+
+    -   Navigating the genome
+
+    -   Customising the display
+
+    -   Working with HTS files - bigWig, BAM, VCF, RNA-seq data
+
+    -   [IGV YouTube Channel](https://www.youtube.com/c/IGVtutorials)
+
+#### **Gene functional enrichment analysis (Jose de las Heras)**
+
+-   Functional enrichment with [gProfiler](https://biit.cs.ut.ee/gprofiler/gost) (GO terms, KEGG pathways etc.)
+
+-   Visualising and summarising results in R
+
+-   Reducing results with [ReviGo](http://revigo.irb.hr/) and similarity matrices
+
+-   Gene set enrichment analysis (GSEA) with the [GSEA](https://www.gsea-msigdb.org/gsea/index.jsp)​​​​​​​ app
+
+-   [Presentation slides](https://uoe-my.sharepoint.com/:p:/g/personal/swebb1_ed_ac_uk/EfvVbyi0aiRPjSSTN1hZtWIBfDOLvZPHszDTBtya2ohykA?e=QyLFxu)
+
+-   <https://www.youtube.com/watch?v=vw85oCOshgg>
+
+#### **Data analysis with R and RStudio**
+
+-   Creating projects in RStudio
+
+-   Using [git in RStudio](https://happygitwithr.com/index.html)​​​​​​​ to version control scripts and software
+
+-   Using [Renv](https://rstudio.github.io/renv/articles/renv.html) to manage package versions in a project
+
+-   Using [RMarkdown](https://rmarkdown.rstudio.com/) to annotate and publish your analysis
+
+-   <https://www.youtube.com/watch?v=TDXCDEFXN1k>
+
+-   The [usethis()](https://usethis.r-lib.org/articles/git-credentials.html) package in R is particularly useful for managing github within RStudio
+
+#### **Managing your own software with Conda environments**
+
+-   How to install Conda on a server or your own computer
+
+-   The difference between Anaconda and Miniconda
+
+-   How to find and install software available via Conda
+
+-   How to manage software environments for different projects in Conda
+
+-   How to run different versions of the same package
+
+-   Sharing environments with other researchers
+
+-   <https://www.youtube.com/watch?v=F7ak8XANl30>
+
+-   [Install and initialise Conda](https://wcbinf.github.io/wcb_bioinformatics/software.html#managing-your-own-software-tools-and-packages-with-conda)
+
+-   [Conda cheatsheet](https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
+
+#### **Running software on the WCB bioinformatics servers**
+
+-   Introduction to different types of software on the bioinformatics servers
+
+-   Running bioinformatics software via the command line
+
+-   Checking which bioinformatics tools are available
+
+-   Running specific versions of bioinformatics tools for reproducible research
+
+-   Accessing web-based tools hosted on the bioinformatics servers
+
+-   Options for managing your own software environment
+
+-   <https://www.youtube.com/watch?v=h_LzXKm0d_0>
+
+-   [Further resources](https://wcbinf.github.io/wcb_bioinformatics/software.html)
+
+#### **A tour of the WCB bioinformatics servers**
+
+-   Introduction to the bioinformatics core facility and where to find help
+
+-   Connecting to the bioinformatics servers (SSH and SSH keys)
+
+-   Navigating the file system (home spaces, group spaces, genome reference data etc.)
+
+-   Making files available on the web (/homes/www)
+
+-   Monitoring running jobs (htop and ps commands)
+
+-   Logging out without losing your session (tmux terminal multiplier)
+
+-   <https://www.youtube.com/watch?v=ZloIeQt_6T4>
+
+-   [Further resources](https://wcbinf.github.io/wcb_bioinformatics/customising.html)

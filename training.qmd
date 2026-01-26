@@ -6,172 +6,137 @@ format:
     toc-depth: 2
 ---
 
-This page is intended to provide a set of resources for those interested in learning about bioinformatics and acquiring new skills. It is by no means a comprehensive list of online training materials and does not cover everything you need to know to become a skilled bioinformatician. However, it should be enough to get you started and we will happily add more subjects if they are of interest to members of the centre.
+## Training courses
 
-Our dedicated bioinformatics servers provide an expansive list of tools via the Linux command line, an RStudio server and access to programming languages and libraries such as Python and Perl. If you require an account, please contact [Shaun Webb](mailto:shaun.webb@ed.ac.uk).
+### Data science for biology (2026)
 
-## Linux command line
+![](images/DSB_banner.png)
 
-Linux operating systems are the workhorse for most large scale genomics applications and are well suited to managing and processing huge data files produced by high throughput sequencing technologies. Although command-line computing can be daunting to new users, grasping a few fundamental commands and learning to run software packages and pipelines from the terminal will open new doors
+Learn data science skills with biological datasets. This course introduces the R programming language. R is an extremely powerful tool for data science, statistical analysis and data visualisation. It is favoured by biologists due to its extensive library of packages for bioinformatics and genomic analysis.
 
-#### Beginner
+The Data Science for Biology course is divided into six modules. Participants can register for the full course or individual modules.
 
--   [WCB introduction to Linux course](https://swebb1.github.io/Intro_to_Linux/)
+-   Introduction to R and RStudio - 17th February
+-   Data manipulation and visualisation (Tidyverse) - 17th March
+-   Genomic datasets in R (Bioconductor) - 21st April
+-   Introduction to statistics (RStatix) - 12th May
+-   Differential expression analysis (DESeq2) - 9th June
+-   Data publication and presentation (Quarto and Shiny) - 23rd June
 
--   [Command line cheat-sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
+Each module consists of:
 
--   [The Unix shell](http://swcarpentry.github.io/shell-novice/)
+-   A full day in person workshop
+-   Online training material for self study
+-   A practical exercise that can be tailored to your own data
+-   Access to monthly bioinformatics drop in sessions
 
--   [Command line for Genomics](https://datacarpentry.org/shell-genomics/)
+#### Cost
 
-#### Intermediate
+-   All modules: **£200**
+-   Individual modules: **£50** 
 
--   [Reproducible research](https://nbis-reproducible-research.readthedocs.io/)
+#### Registration
 
-    -   git, Conda, Snakemake, R Markdown, Jupyter, Docker and Singularity
+Please complete this registration form to sign up for the course or individual modules:\
+[Data Science for Biology Registration Form](https://forms.office.com/e/hx73VvSAJs)
 
--   Package management with Conda (coming soon)
+This course is hosted by The Bioinformatics Core at the Discovery Research Platform for Hidden Cell Biology (DRP-HCB).
 
-    -   [Getting started with Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+Contact [shaun.webb\@ed.ac.uk](mailto:shaun.webb@ed.ac.uk) for more information.
 
-    -   [Conda cheatsheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
+#### Modules
 
--   Running automated pipelines (coming soon)
+**Introduction to R and RStudio**\
+17th February, 10am - 4pm\
+Rowan teaching room, The Nucleus, Kings Buildings
 
-## Programming in R
+Learn the basics of the [R programming language](https://www.r-project.org/) and the [RStudio](https://posit.co/products/open-source/rstudio/) programming environment.
 
-R is a programming language designed for data retrieval, manipulation and visualisation as well as statistical analysis. Learning R will allow you to move beyond spreadsheets and access the full analysis potential of large datasets. You can build multi-dimensional visualisations as well as interactive web applications and documents. It's easy to get to grips with the basics of R and the [RStudio](https://rstudio.com/) interface provides an intuitive graphical environment in which to develop your code. The extensive [Bioconductor](https://www.bioconductor.org/) libraries also provide pre-built functions to analyse and interpret all sorts of genomic datasets.
+-   Install R, RStudio and packages
+-   Use the RStudio interface
+-   Basic R syntax
+-   Data types and structures
+-   Importing and exporting data
+-   Plots and statistics with base R
 
-#### Beginner
+**Data manipulation and visualisation (Tidyverse)**\
+17th March, 10am - 4pm\
+JCMB 3211, Kings Buildings
 
--   [WCB Introduction to R course](https://swebb1.github.io/R_Training/)
+The [*Tidyverse*](https://tidyverse.org/) is a collection of R packages designed for data science and the preferred utilities for many R users. This module introduces the core Tidyverse packages for data manipulation and visualisation.
 
-    -   RStudio, base R, Tidyverse packages
+-   Introduction to the Tidyverse packages (tidyr, readr, dplyr, ggplot2)
+-   Work with large datasets
+-   Import, format, filter and summarise tables of data
+-   Create publication ready visualisations
 
--   [R Cheatsheets](https://rstudio.com/resources/cheatsheets/)
+**Genomic datasets in R (Bioconductor packages)**\
+21st April, 10am - 4pm\
+Rowan teaching room, The Nucleus, Kings Buildings
 
-#### Beginner - Intermediate
+[Bioconductor](https://www.bioconductor.org/) is a collection of R packages specifically designed for analysing genomic datasets. This module introduces some of the core Bioconductor packages and data formats for working with biological data.
 
--   [R for Data Science](https://r4ds.had.co.nz/)
+-   Bioconductor overview
+-   Importing and exporting genomic data
+-   Operations on genomic datasets
+-   Plotting genomic data
 
-#### Advanced topics
+**Introduction to Statistics (RStatix)**\
+12th May, 10am - 4pm\
+JCMB 4325, Kings Buildings
 
--   [WCB R with genomics data course](https://swebb1.github.io/R-with-Genomics-Data/)
+An introduction to statistical analysis in R using the [RStatix](https://rpkgs.datanovia.com/rstatix/) package. This module covers common statistical tests and how to apply them to biological datasets.
 
--   [Advanced R](https://adv-r.hadley.nz/)
+-   Data exploration and visualisation
+-   Common statistical tests (t-test, ANOVA, chi-squared test)
+-   Assumptions and diagnostics
+-   Post-hoc testing and multiple testing correction
 
--   [R Packages](https://r-pkgs.org/)
+**Differential expression analysis (DESeq2)**\
+9th June, 10am - 4pm\
+Peter Wilson G155, Kings Buildings
 
--   [WCB Genomic data in R](http://bifx-core.bio.ed.ac.uk/training/ROI_workshop/R_roi_workshop.html)
+Perform a full differential expression analysis of RNA-seq data using the [DESeq2](https://bioconductor.posit.co/packages/3.19/bioc/html/DESeq2.html) Bioconductor package.
 
--   [R Markdown lessons](https://rmarkdown.rstudio.com/lesson-1.html)
+-   Data import and quality control
+-   Normalisation and transformation
+-   Differential expression testing
+-   Visualisation and interpretation of results
+-   Downstream analysis (pathway analysis, gene ontology)
 
--   [Build Shiny applications](https://shiny.rstudio.com/tutorial/)
+**Data publication and presentation (Quarto and Shiny)**\
+23rd June, 10am - 4pm\
+Peter Wilson G155, Kings Buildings
 
-## Programming in Python
+Learn how to build reproducible analyses and present your results as web pages and interactive applications.
 
-Python is a general-purpose programming language that is becoming increasingly popular with data scientists. Python has a growing number of libraries for data manipulation, exploration and visualisation as well as machine learning and is ideal for deploying applications and reproducible code. [Jupyter](https://jupyter.org/) notebooks provide an interactive development environment for coding in Python and other languages.
+-   Project version control with [git](https://git-scm.com/) and [GitHub](https://github.com/)
+-   Package management with [renv](https://rstudio.github.io/renv/)
+-   Create reproducible documents and websites with [Quarto](https://quarto.org/)
+-   Build interactive data visualisations with [Shiny](https://shiny.posit.co/)
 
-#### Beginner - Intermediate
+### Analysing high-throughput sequencing data (2026)
 
--   [Python data science handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+Coming soon.
 
-    -   [Accompanying videos](https://www.youtube.com/watch?v=_ZEWDGpM-vM&list=PLYCpMb24GpOC704uO9svUrihl-HY1tTJJ)
+## Data Drop-Ins
 
--   [Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
+Monthly drop-in sessions to get help with bioinformatics analysis and training exercises.
 
-#### Advanced topics
+Upcoming dates:
 
--   Building pipelines with SnakeMake
+-   Friday 6th March 2026, 14:00 - 15:00
 
-    -   [SnakeMake Tutorial](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html)
+-   Thursday 2nd April 2026, 14:00 - 15:00
 
-    -   [SnakeMake slides](https://slides.com/johanneskoester/snakemake-short#/)
+-   Friday 1st May 2026, 14:00 - 15:00
 
-## Statistics for biology
+-   Thursday 28th May 2026, 14:00 - 15:00
 
-While there are countless resources for learning statistics and a wealth of engaging videos on Youtube, it is important for bioinformaticians to understand statistics in the context of biology. Knowledge of statistical analysis will allow you to correctly describe and make inferences from your data as well as designing meaningful and useful experiments. Here are some links to get started:
+-   Friday 25th June 2026, 14:00 - 15:00
 
--   [Introduction to Stats](https://docs.google.com/presentation/d/1qmtT3W6oylWs9xxeJ0WsNHyHbK6TiUJQsEQtFFVpMtU/edit?usp=sharing) (slides)
+## Bioinformatics Live
 
--   [Introduction to statistics](https://www.bioinformatics.babraham.ac.uk/training/R_Statistics/Introduction%20to%20Statistics%20with%20R%20manual.pdf) with R
+Regular live demonstration sessions covering a variety of bioinformatics tools.
 
--   [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) (Nature collection)
-
--   [Statistics for biologists](https://www.nature.com/collections/qghhqm) (Nature collection)
-
--   [Statistical learning](https://drive.google.com/open?id=1e9X5Tc4F8meqYWJOZn-Y2R7BcmjbQVg_) (comprehensive stats applied in R)
-
--   [Roslin Institute Video Tutorials](https://media.ed.ac.uk/channel/The+Roslin+Institute+-+Training/40716141)
-
-## Analysing HTS experiments
-
-The tutorials below provide introductions to analysing specific types of high throughput sequencing experiments. They are designed to help you understand your data, complete generic processing steps and explore and interpret the output. Please note the pre-requisite skills in brackets.
-
-In most cases, the pipelines provided are simple and generic and may not be suitable for your own analysis. The bioinformatics core facility is available to collaborate on your project and to offer advice on experimental design and data analysis strategies. We also provide an expansive set of software tools and analysis workflows accessible through our bioinformatics servers:
-
-#### ChIP-seq
-
--   [WCB ChIP-seq analysis workshop](https://danrobertson87.github.io/2020_chip-seq_workshop.github.io) (Linux command line)
-
-#### RNA-seq
-
--   [WCB RNA-seq analysis](https://swebb1.github.io/RNA-seq_workshop) (Linux command line)
-
--   [Differential expression with DESeq2](https://www.bioconductor.org/packages/devel/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html) (R)
-
-#### Hi-C
-
--   [WCB Hi-C data analysis](https://danrobertson87.github.io/2022_hic_workshop.github.io) (command line)
-
-#### CLIP/CRAC
-
--   [PyCRAC manual](https://bitbucket.org/sgrann/pycrac/src/default/The%20pyCRAC%20Manual.pdf)
-
-#### CLASH
-
--   [Hyb methods paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3969109/)
-
-#### Methyl-seq
-
--   [QC and alignment of BS-seq data using Bismark](https://www.bioinformatics.babraham.ac.uk/training/Methylation_Course/Basic%20BS-Seq%20processing%20Exercises.pdf) (command line)
-
-## Further Bioinformatics Training Resources
-
-[Edinburgh Genomics](https://genomics.ed.ac.uk/services/training)
-
--   Training programme for Edinburgh Genomics workshops and online courses.
-
-[Carpentries](https://carpentries.org/)
-
--   Community driven project delivering training in data science and coding skills. [Software Carpentry](https://software-carpentry.org/) and [Data Carpentry](http://www.datacarpentry.org/) websites include many free online courses. [Edinburgh Carpentries](https://edcarp.github.io/) host regular events at the university and include a Data Carpentry for Genomics course.
-
-[HarvardX](http://rafalab.github.io/pages/harvardx.html)
-
--   A comprehensive set of courses covering R, Python, and biostatistics among other things. Includes case studies in analysing RNA-seq, ChIP-seq and Methyl-seq data.
-
-[Harvard Chan Bioinformatics Core](https://github.com/hbctraining)
-
--   Training courses in R and command line including many different HTS techniques.
-
-[Babraham Bioinformatics](https://www.bioinformatics.babraham.ac.uk/training.html)
-
--   Training courses offered by the Babraham Bioinformatics group in R, Python, statistics and sequencing applications.
-
--   Bitesize bioinformatics [modules](https://tinyurl.com/bitebioinf) and [videos](https://www.youtube.com/playlist?list=PLbiByRpDb_hP7b-I1GR4eEWCD2OqdZEg1)
-
-[Rockefeller Bioinformatics](https://rockefelleruniversity.github.io/training.html)
-
--   A collection of bioinformatics training courses
-
-[Biodatascience](https://biodatascience.github.io/)
-
--   A collection of R courses in data science, statistics and computational biology.
-
-[Datacamp](http://www.datacamp.com/)
-
--   Interactive learning with videos, lessons, tests and a built-in programming interface. Datacamp is a subscription service with some free modules for learning R, Python and data science skills.
-
-[UoC bioinformatics core](https://github.com/bioinformatics-core-shared-training)
-
--   A collection of bioinformatics training courses from the University of Cambridge bioinformatics core facility.
+See the [Bioinformatics Live](bioinformatics_live.html) page for more details and upcoming sessions.

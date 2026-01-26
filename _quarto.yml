@@ -9,9 +9,13 @@ website:
       - href: index.qmd
         text: Home
       - href: training.qmd
-        text: "Training"
+        text: "Training Events"
+      - href: training_resources.qmd
+        text: "Training Resources"
       - href: best_practices.qmd
         text: "Best Practices"
+      - href: bioinformatics_live.qmd
+        text: "Bioinformatics Live"
       #- href: resources.qmd
       #  text: "Resources"
 
