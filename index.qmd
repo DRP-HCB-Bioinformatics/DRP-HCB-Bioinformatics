@@ -10,9 +10,9 @@ This is the homepage for users of the Bioinformatics Core at the Discovery Resea
 
 <br>
 
-You will find details on how to access the servers, introductory training course, best-practice documentation for using our in house servers and other useful resources.
+You will find details on how to access training courses as well as best-practice documentation for using our in house servers and other useful resources.
 
-For more information on how to access or collaborate with the Bioinformatics Core, please see the DRP-HCB website.
+For more information on how to access or collaborate with the Bioinformatics Core, please see the [DRP-HCB website](https://biology.ed.ac.uk/drp).
 
 ------------------------------------------------------------------------
 
