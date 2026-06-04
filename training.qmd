@@ -94,7 +94,7 @@ An introduction to statistical analysis in R using the [RStatix](https://rpkgs.d
 
 **Differential expression analysis (DESeq2)**\
 9th June, 10am - 4pm\
-Peter Wilson G155, Kings Buildings
+JCMB 3212, Kings Buildings
 
 Perform a full differential expression analysis of RNA-seq data using the [DESeq2](https://bioconductor.posit.co/packages/3.19/bioc/html/DESeq2.html) Bioconductor package.
 
@@ -106,7 +106,7 @@ Perform a full differential expression analysis of RNA-seq data using the [DESeq
 
 **Data publication and presentation (Quarto and Shiny)**\
 23rd June, 10am - 4pm\
-Peter Wilson G155, Kings Buildings
+JCMB 3212, Kings Buildings
 
 Learn how to build reproducible analyses and present your results as web pages and interactive applications.
 
