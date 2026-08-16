@@ -18,23 +18,23 @@ Linux operating systems are the workhorse for most large scale genomics applicat
 
 #### Beginner
 
--   [Command line cheat-sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
+- [Command line cheat-sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
 
--   [The Unix shell](http://swcarpentry.github.io/shell-novice/)
+- [The Unix shell](http://swcarpentry.github.io/shell-novice/)
 
--   [Command line for Genomics](https://datacarpentry.org/shell-genomics/)
+- [Command line for Genomics](https://datacarpentry.org/shell-genomics/)
 
 #### Intermediate
 
--   [Reproducible research](https://nbis-reproducible-research.readthedocs.io/)
+- [Reproducible research](https://nbis-reproducible-research.readthedocs.io/)
 
-    -   git, Conda, Snakemake, R Markdown, Jupyter, Docker and Singularity
+  - git, Conda, Snakemake, R Markdown, Jupyter, Docker and Singularity
 
--   Package management with Conda
+- Package management with Conda
 
-    -   [Getting started with Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+  - [Getting started with Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
 
-    -   [Conda cheatsheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
+  - [Conda cheatsheet](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
 
 ## Programming in R
 
@@ -42,21 +42,21 @@ R is a programming language designed for data retrieval, manipulation and visual
 
 #### Beginner
 
--   [R Cheatsheets](https://rstudio.com/resources/cheatsheets/)
+- [R Cheatsheets](https://rstudio.com/resources/cheatsheets/)
 
 #### Beginner - Intermediate
 
--   [R for Data Science](https://r4ds.had.co.nz/)
+- [R for Data Science](https://r4ds.had.co.nz/)
 
 #### Advanced topics
 
--   [Advanced R](https://adv-r.hadley.nz/)
+- [Advanced R](https://adv-r.hadley.nz/)
 
--   [R Packages](https://r-pkgs.org/)
+- [R Packages](https://r-pkgs.org/)
 
--   [R Markdown lessons](https://rmarkdown.rstudio.com/lesson-1.html)
+- [R Markdown lessons](https://rmarkdown.rstudio.com/lesson-1.html)
 
--   [Build Shiny applications](https://shiny.rstudio.com/tutorial/)
+- [Build Shiny applications](https://shiny.rstudio.com/tutorial/)
 
 ## Programming in Python
 
@@ -64,35 +64,35 @@ Python is a general-purpose programming language that is becoming increasingly p
 
 #### Beginner - Intermediate
 
--   [Python data science handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+- [Python data science handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
-    -   [Accompanying videos](https://www.youtube.com/watch?v=_ZEWDGpM-vM&list=PLYCpMb24GpOC704uO9svUrihl-HY1tTJJ)
+  - [Accompanying videos](https://www.youtube.com/watch?v=_ZEWDGpM-vM&list=PLYCpMb24GpOC704uO9svUrihl-HY1tTJJ)
 
--   [Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
+- [Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
 
 #### Advanced topics
 
--   Building pipelines with SnakeMake
+- Building pipelines with SnakeMake
 
-    -   [SnakeMake Tutorial](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html)
+  - [SnakeMake Tutorial](https://snakemake.readthedocs.io/en/stable/tutorial/tutorial.html)
 
-    -   [SnakeMake slides](https://slides.com/johanneskoester/snakemake-short#/)
+  - [SnakeMake slides](https://slides.com/johanneskoester/snakemake-short#/)
 
 ## Statistics for biology
 
 While there are countless resources for learning statistics and a wealth of engaging videos on Youtube, it is important for bioinformaticians to understand statistics in the context of biology. Knowledge of statistical analysis will allow you to correctly describe and make inferences from your data as well as designing meaningful and useful experiments. Here are some links to get started:
 
--   [Introduction to Stats](https://docs.google.com/presentation/d/1qmtT3W6oylWs9xxeJ0WsNHyHbK6TiUJQsEQtFFVpMtU/edit?usp=sharing) (slides)
+- [Introduction to Stats](https://docs.google.com/presentation/d/1qmtT3W6oylWs9xxeJ0WsNHyHbK6TiUJQsEQtFFVpMtU/edit?usp=sharing) (slides)
 
--   [Introduction to statistics](https://www.bioinformatics.babraham.ac.uk/training/R_Statistics/Introduction%20to%20Statistics%20with%20R%20manual.pdf) with R
+- [Introduction to statistics](https://www.bioinformatics.babraham.ac.uk/training/R_Statistics/Introduction%20to%20Statistics%20with%20R%20manual.pdf) with R
 
--   [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) (Nature collection)
+- [Points of Significance](https://www.nature.com/collections/qghhqm/pointsofsignificance) (Nature collection)
 
--   [Statistics for biologists](https://www.nature.com/collections/qghhqm) (Nature collection)
+- [Statistics for biologists](https://www.nature.com/collections/qghhqm) (Nature collection)
 
--   [Statistical learning](https://drive.google.com/open?id=1e9X5Tc4F8meqYWJOZn-Y2R7BcmjbQVg_) (comprehensive stats applied in R)
+- [Statistical learning](https://drive.google.com/open?id=1e9X5Tc4F8meqYWJOZn-Y2R7BcmjbQVg_) (comprehensive stats applied in R)
 
--   [Roslin Institute Video Tutorials](https://media.ed.ac.uk/channel/The+Roslin+Institute+-+Training/40716141)
+- [Roslin Institute Video Tutorials](https://media.ed.ac.uk/channel/The+Roslin+Institute+-+Training/40716141)
 
 ## Analysing HTS experiments
 
@@ -102,62 +102,62 @@ In most cases, the pipelines provided are simple and generic and may not be suit
 
 #### ChIP-seq
 
--   [WCB ChIP-seq analysis workshop](https://danrobertson87.github.io/2020_chip-seq_workshop.github.io) (Linux command line)
+- [WCB ChIP-seq analysis workshop](https://danrobertson87.github.io/2020_chip-seq_workshop.github.io) (Linux command line)
 
 #### RNA-seq
 
--   [WCB RNA-seq analysis](https://swebb1.github.io/RNA-seq_workshop) (Linux command line)
+- [WCB RNA-seq analysis](https://swebb1.github.io/RNA-seq_workshop) (Linux command line)
 
--   [Differential expression with DESeq2](https://www.bioconductor.org/packages/devel/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html) (R)
+- [Differential expression with DESeq2](https://www.bioconductor.org/packages/devel/workflows/vignettes/rnaseqGene/inst/doc/rnaseqGene.html) (R)
 
 #### Hi-C
 
--   [WCB Hi-C data analysis](https://danrobertson87.github.io/2022_hic_workshop.github.io) (command line)
+- [WCB Hi-C data analysis](https://danrobertson87.github.io/2022_hic_workshop.github.io) (command line)
 
 #### CLIP/CRAC
 
--   [PyCRAC manual](https://bitbucket.org/sgrann/pycrac/src/default/The%20pyCRAC%20Manual.pdf)
+- [PyCRAC manual](https://bitbucket.org/sgrann/pycrac/src/default/The%20pyCRAC%20Manual.pdf)
 
 #### CLASH
 
--   [Hyb methods paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3969109/)
+- [Hyb methods paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3969109/)
 
 #### Methyl-seq
 
--   [QC and alignment of BS-seq data using Bismark](https://www.bioinformatics.babraham.ac.uk/training/Methylation_Course/Basic%20BS-Seq%20processing%20Exercises.pdf) (command line)
+- [QC and alignment of BS-seq data using Bismark](https://www.bioinformatics.babraham.ac.uk/training/Methylation_Course/Basic%20BS-Seq%20processing%20Exercises.pdf) (command line)
 
 ## Further Bioinformatics Training Resources
 
 [Carpentries](https://carpentries.org/)
 
--   Community driven project delivering training in data science and coding skills. [Software Carpentry](https://software-carpentry.org/) and [Data Carpentry](http://www.datacarpentry.org/) websites include many free online courses. [Edinburgh Carpentries](https://edcarp.github.io/) host regular events at the university and include a Data Carpentry for Genomics course.
+- Community driven project delivering training in data science and coding skills. [Software Carpentry](https://software-carpentry.org/) and [Data Carpentry](http://www.datacarpentry.org/) websites include many free online courses. [Edinburgh Carpentries](https://edcarp.github.io/) host regular events at the university and include a Data Carpentry for Genomics course.
 
 [HarvardX](http://rafalab.github.io/pages/harvardx.html)
 
--   A comprehensive set of courses covering R, Python, and biostatistics among other things. Includes case studies in analysing RNA-seq, ChIP-seq and Methyl-seq data.
+- A comprehensive set of courses covering R, Python, and biostatistics among other things. Includes case studies in analysing RNA-seq, ChIP-seq and Methyl-seq data.
 
 [Harvard Chan Bioinformatics Core](https://github.com/hbctraining)
 
--   Training courses in R and command line including many different HTS techniques.
+- Training courses in R and command line including many different HTS techniques.
 
 [Babraham Bioinformatics](https://www.bioinformatics.babraham.ac.uk/training.html)
 
--   Training courses offered by the Babraham Bioinformatics group in R, Python, statistics and sequencing applications.
+- Training courses offered by the Babraham Bioinformatics group in R, Python, statistics and sequencing applications.
 
--   Bitesize bioinformatics [modules](https://tinyurl.com/bitebioinf) and [videos](https://www.youtube.com/playlist?list=PLbiByRpDb_hP7b-I1GR4eEWCD2OqdZEg1)
+- Bitesize bioinformatics [modules](https://tinyurl.com/bitebioinf) and [videos](https://www.youtube.com/playlist?list=PLbiByRpDb_hP7b-I1GR4eEWCD2OqdZEg1)
 
 [Rockefeller Bioinformatics](https://rockefelleruniversity.github.io/training.html)
 
--   A collection of bioinformatics training courses
+- A collection of bioinformatics training courses
 
 [Biodatascience](https://biodatascience.github.io/)
 
--   A collection of R courses in data science, statistics and computational biology.
+- A collection of R courses in data science, statistics and computational biology.
 
 [Datacamp](http://www.datacamp.com/)
 
--   Interactive learning with videos, lessons, tests and a built-in programming interface. Datacamp is a subscription service with some free modules for learning R, Python and data science skills.
+- Interactive learning with videos, lessons, tests and a built-in programming interface. Datacamp is a subscription service with some free modules for learning R, Python and data science skills.
 
 [UoC bioinformatics core](https://github.com/bioinformatics-core-shared-training)
 
--   A collection of bioinformatics training courses from the University of Cambridge bioinformatics core facility.
+- A collection of bioinformatics training courses from the University of Cambridge bioinformatics core facility.
