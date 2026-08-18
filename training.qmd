@@ -36,7 +36,7 @@ Each module consists of:
 #### Registration
 
 Please complete this registration form to sign up for the course or individual modules:\
-[Analysing Sequencing Data Form]()
+[Analysing Sequencing Data Registration Form](https://forms.cloud.microsoft/e/T13amhY9sL)
 
 This course is hosted by The Bioinformatics Core at the Discovery Research Platform for Hidden Cell Biology (DRP-HCB).
 
