@@ -12,7 +12,9 @@ format:
 
 Learn to analyse high throughput sequencing (HTS) data with the Linux command line. This course introduces popular tools, file formats and workflows for processing HTS datasets.
 
-The course is divided into six modules. Participants can register for the full course or individual modules.
+A **laptop computer** is required for this course.
+
+The course is divided into five modules. Participants can register for the full course or individual modules.
 
 - Bioinformatics on the Linux command line - 8th September
 - High throughput sequencing data - 29th September
@@ -24,13 +26,12 @@ Each module consists of:
 
 - A full day in person workshop
 - Online training material for self study
-- A practical exercise that can be tailored to your own data
-- Monthly bioinformatics clinic for further advice
+- Monthly bioinformatics clinics for further advice
 
 #### Cost
 
 - All modules: **£200**
-- Individual modules: **£50** 
+- Individual modules: **£50**
 
 #### Registration
 
@@ -58,12 +59,12 @@ Gain hands-on experience using the Linux command line and working in a terminal 
 Tuesday 29th September, 10am - 4pm\
 JCMB 1512, Kings Buildings
 
-Get to grips with sequencing data and formats. Navigate public repositories such as ENA, SRA, and GEO, to identify datasets of interest. Download, explore and assess sequencing data for further analysis.
+Get to grips with sequencing data and file formats. Navigate online sequencing data repositories to identify publicly available datasets. Download, explore and assess sequencing data for further analysis.
 
-- Search and download data from public repositories
+- Search and download data from public repositories ([ENA](https://www.ebi.ac.uk/ena/browser/home), [GEO](https://www.ncbi.nlm.nih.gov/geo/), [SRA](https://www.ncbi.nlm.nih.gov/sra))
 - Understand HTS file formats
-- Perform quality control and assess sequencing data
-- Prepare reference sequences for your analysis
+- Perform quality control and assess sequencing data for analysis
+- Explore reference sequence databases  ([Ensembl](https://www.ensembl.org/),[NCBI](https://www.ncbi.nlm.nih.gov/))
 
 **HTS data analysis (ChIP-seq)**\
 Tuesday 27th October, 9am - 3pm\
@@ -78,7 +79,7 @@ Perform a complete analysis of a sequencing dataset, from raw data to publicatio
 - Downstream ChIP-seq analysis e.g. peak calling, motif analysis
 
 **Long read transcriptomics**\
-Tuesday 24th September, 9am - 3pm\
+Tuesday 24th November, 9am - 3pm\
 JCMB 1206C, Kings Buildings
 
 This workshop covers analysis of long-read transcriptomic data in both model and non-model organisms. Learn to assemble transcripts, identify and annotate genes, and perform basic transcriptome analysis.
