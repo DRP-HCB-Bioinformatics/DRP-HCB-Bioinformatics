@@ -13,3 +13,5 @@ This page contains a list of best practice documents for managing bioinformatics
 -   [Customising your command line experience](customising.html)
 
 -   [Downloading sequencing data](downloading.html)
+
+-   [Guide to AI in Biology](ml_intro.html)
