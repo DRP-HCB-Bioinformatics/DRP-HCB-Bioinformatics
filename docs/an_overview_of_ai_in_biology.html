@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>an_overview_of_ai_in_biology – DRP-HCB-Bioinformatics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DRP-HCB-Bioinformatics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./training.html"> 
+<span class="menu-text">Training Events</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./training_resources.html"> 
+<span class="menu-text">Training Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./best_practices.html"> 
+<span class="menu-text">Best Practices</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./bioinformatics_live.html"> 
+<span class="menu-text">Bioinformatics Live</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#an-overview-of-ai-in-biology" id="toc-an-overview-of-ai-in-biology" class="nav-link active" data-scroll-target="#an-overview-of-ai-in-biology">An Overview of AI in Biology</a>
+  <ul class="collapse">
+  <li><a href="#at-a-glance" id="toc-at-a-glance" class="nav-link" data-scroll-target="#at-a-glance">At a glance</a></li>
+  </ul></li>
+  <li><a href="#part-1-what-is-ai" id="toc-part-1-what-is-ai" class="nav-link" data-scroll-target="#part-1-what-is-ai">Part 1: What is AI?</a>
+  <ul class="collapse">
+  <li><a href="#one-word-many-meanings" id="toc-one-word-many-meanings" class="nav-link" data-scroll-target="#one-word-many-meanings">1.1 One word, many meanings</a></li>
+  <li><a href="#a-short-history" id="toc-a-short-history" class="nav-link" data-scroll-target="#a-short-history">1.2 A short history</a>
+  <ul class="collapse">
+  <li><a href="#why-expert-systems-ran-out-of-road" id="toc-why-expert-systems-ran-out-of-road" class="nav-link" data-scroll-target="#why-expert-systems-ran-out-of-road">Why expert systems ran out of road</a></li>
+  </ul></li>
+  <li><a href="#demystifying-ai" id="toc-demystifying-ai" class="nav-link" data-scroll-target="#demystifying-ai">1.3 Demystifying “AI”</a></li>
+  <li><a href="#a-very-rough-family-tree-of-ai" id="toc-a-very-rough-family-tree-of-ai" class="nav-link" data-scroll-target="#a-very-rough-family-tree-of-ai">1.4 A (very rough) family tree of AI</a></li>
+  <li><a href="#classical-machine-learning" id="toc-classical-machine-learning" class="nav-link" data-scroll-target="#classical-machine-learning">1.5 Classical machine learning</a>
+  <ul class="collapse">
+  <li><a href="#how-does-a-machine-learn-the-rules" id="toc-how-does-a-machine-learn-the-rules" class="nav-link" data-scroll-target="#how-does-a-machine-learn-the-rules">How does a machine learn the rules?</a></li>
+  <li><a href="#a-plain-language-tour-of-common-algorithms" id="toc-a-plain-language-tour-of-common-algorithms" class="nav-link" data-scroll-target="#a-plain-language-tour-of-common-algorithms">A plain-language tour of common algorithms</a></li>
+  <li><a href="#strengths-and-limits" id="toc-strengths-and-limits" class="nav-link" data-scroll-target="#strengths-and-limits">Strengths and limits</a></li>
+  <li><a href="#worked-example-antimicrobial-resistance-amr" id="toc-worked-example-antimicrobial-resistance-amr" class="nav-link" data-scroll-target="#worked-example-antimicrobial-resistance-amr">Worked example: antimicrobial resistance (AMR)</a></li>
+  <li><a href="#generalising-from-genotype-phenotype-to-any-x-y" id="toc-generalising-from-genotype-phenotype-to-any-x-y" class="nav-link" data-scroll-target="#generalising-from-genotype-phenotype-to-any-x-y">Generalising: from genotype → phenotype to any x → y</a></li>
+  <li><a href="#what-if-you-dont-have-y" id="toc-what-if-you-dont-have-y" class="nav-link" data-scroll-target="#what-if-you-dont-have-y">What if you don’t have y?</a></li>
+  </ul></li>
+  <li><a href="#supervised-vs.-unsupervised-learning" id="toc-supervised-vs.-unsupervised-learning" class="nav-link" data-scroll-target="#supervised-vs.-unsupervised-learning">1.6 Supervised vs.&nbsp;unsupervised learning</a>
+  <ul class="collapse">
+  <li><a href="#where-ml-is-used-across-biology" id="toc-where-ml-is-used-across-biology" class="nav-link" data-scroll-target="#where-ml-is-used-across-biology">Where ML is used across biology</a></li>
+  <li><a href="#applying-this-to-your-own-research" id="toc-applying-this-to-your-own-research" class="nav-link" data-scroll-target="#applying-this-to-your-own-research">Applying this to your own research</a></li>
+  </ul></li>
+  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning">1.7 Deep learning</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-neural-network" id="toc-what-is-a-neural-network" class="nav-link" data-scroll-target="#what-is-a-neural-network">What is a neural network?</a></li>
+  <li><a href="#why-deep-learning-is-called-a-black-box" id="toc-why-deep-learning-is-called-a-black-box" class="nav-link" data-scroll-target="#why-deep-learning-is-called-a-black-box">Why deep learning is called a “black box”</a></li>
+  <li><a href="#deep-learning-is-ideal-for-large-data-and-complex-relationships" id="toc-deep-learning-is-ideal-for-large-data-and-complex-relationships" class="nav-link" data-scroll-target="#deep-learning-is-ideal-for-large-data-and-complex-relationships">Deep learning is ideal for large data and complex relationships</a></li>
+  </ul></li>
+  <li><a href="#discriminative-vs.-generative-models" id="toc-discriminative-vs.-generative-models" class="nav-link" data-scroll-target="#discriminative-vs.-generative-models">1.8 Discriminative vs.&nbsp;generative models</a></li>
+  <li><a href="#large-language-models-llms" id="toc-large-language-models-llms" class="nav-link" data-scroll-target="#large-language-models-llms">1.9 Large language models (LLMs)</a></li>
+  <li><a href="#two-worlds-mainstream-ai-vs.-research-ml" id="toc-two-worlds-mainstream-ai-vs.-research-ml" class="nav-link" data-scroll-target="#two-worlds-mainstream-ai-vs.-research-ml">1.10 Two worlds: mainstream AI vs.&nbsp;research ML</a>
+  <ul class="collapse">
+  <li><a href="#quick-quiz-where-do-popular-tools-sit" id="toc-quick-quiz-where-do-popular-tools-sit" class="nav-link" data-scroll-target="#quick-quiz-where-do-popular-tools-sit">Quick quiz: where do popular tools sit?</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#part-2-ai-usage-and-its-criticisms" id="toc-part-2-ai-usage-and-its-criticisms" class="nav-link" data-scroll-target="#part-2-ai-usage-and-its-criticisms">Part 2: AI usage and its criticisms</a>
+  <ul class="collapse">
+  <li><a href="#the-mood" id="toc-the-mood" class="nav-link" data-scroll-target="#the-mood">2.1 The mood</a></li>
+  <li><a href="#energy-usage" id="toc-energy-usage" class="nav-link" data-scroll-target="#energy-usage">2.2 Energy usage</a></li>
+  <li><a href="#trained-on-stolen-copyrighted-data" id="toc-trained-on-stolen-copyrighted-data" class="nav-link" data-scroll-target="#trained-on-stolen-copyrighted-data">2.3 “Trained on stolen / copyrighted data”</a></li>
+  <li><a href="#it-makes-you-stupid-cognitive-decay" id="toc-it-makes-you-stupid-cognitive-decay" class="nav-link" data-scroll-target="#it-makes-you-stupid-cognitive-decay">2.4 “It makes you stupid” (cognitive decay)</a></li>
+  <li><a href="#open-and-local-llms-a-more-ethical-approach" id="toc-open-and-local-llms-a-more-ethical-approach" class="nav-link" data-scroll-target="#open-and-local-llms-a-more-ethical-approach">2.5 Open and local LLMs: a more ethical approach?</a>
+  <ul class="collapse">
+  <li><a href="#do-they-fix-the-three-criticisms" id="toc-do-they-fix-the-three-criticisms" class="nav-link" data-scroll-target="#do-they-fix-the-three-criticisms">Do they fix the three criticisms?</a></li>
+  <li><a href="#how-to-get-started" id="toc-how-to-get-started" class="nav-link" data-scroll-target="#how-to-get-started">How to get started</a></li>
+  </ul></li>
+  <li><a href="#do-these-criticisms-apply-to-research-ml" id="toc-do-these-criticisms-apply-to-research-ml" class="nav-link" data-scroll-target="#do-these-criticisms-apply-to-research-ml">2.6 Do these criticisms apply to research ML?</a></li>
+  </ul></li>
+  <li><a href="#part-3-pitfalls-of-machine-learning-in-research" id="toc-part-3-pitfalls-of-machine-learning-in-research" class="nav-link" data-scroll-target="#part-3-pitfalls-of-machine-learning-in-research">Part 3: Pitfalls of machine learning in research</a>
+  <ul class="collapse">
+  <li><a href="#the-main-issues" id="toc-the-main-issues" class="nav-link" data-scroll-target="#the-main-issues">3.1 The main issues</a>
+  <ul class="collapse">
+  <li><a href="#bias-replication-garbage-in-garbage-out" id="toc-bias-replication-garbage-in-garbage-out" class="nav-link" data-scroll-target="#bias-replication-garbage-in-garbage-out">Bias replication: “garbage in, garbage out”</a></li>
+  <li><a href="#overfitting-and-poor-generalisability" id="toc-overfitting-and-poor-generalisability" class="nav-link" data-scroll-target="#overfitting-and-poor-generalisability">Overfitting and poor generalisability</a></li>
+  <li><a href="#correlation-is-not-causation" id="toc-correlation-is-not-causation" class="nav-link" data-scroll-target="#correlation-is-not-causation">Correlation is not causation</a></li>
+  <li><a href="#reproducibility" id="toc-reproducibility" class="nav-link" data-scroll-target="#reproducibility">Reproducibility</a></li>
+  <li><a href="#high-technical-skills-required" id="toc-high-technical-skills-required" class="nav-link" data-scroll-target="#high-technical-skills-required">High technical skills required</a></li>
+  <li><a href="#overcomplicating-or-overestimating" id="toc-overcomplicating-or-overestimating" class="nav-link" data-scroll-target="#overcomplicating-or-overestimating">Overcomplicating, or overestimating</a></li>
+  </ul></li>
+  <li><a href="#how-to-avoid-these-issues" id="toc-how-to-avoid-these-issues" class="nav-link" data-scroll-target="#how-to-avoid-these-issues">3.2 How to avoid these issues</a></li>
+  </ul></li>
+  <li><a href="#part-4-summary-and-key-takeaways" id="toc-part-4-summary-and-key-takeaways" class="nav-link" data-scroll-target="#part-4-summary-and-key-takeaways">Part 4: Summary and key takeaways</a></li>
+  <li><a href="#part-5-getting-started-and-resources" id="toc-part-5-getting-started-and-resources" class="nav-link" data-scroll-target="#part-5-getting-started-and-resources">Part 5: Getting started and resources</a>
+  <ul class="collapse">
+  <li><a href="#a-suggested-learning-path" id="toc-a-suggested-learning-path" class="nav-link" data-scroll-target="#a-suggested-learning-path">5.1 A suggested learning path</a></li>
+  <li><a href="#training-and-support-from-the-discovery-research-platform" id="toc-training-and-support-from-the-discovery-research-platform" class="nav-link" data-scroll-target="#training-and-support-from-the-discovery-research-platform">5.2 Training and support from the Discovery Research Platform</a></li>
+  </ul></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">an_overview_of_ai_in_biology</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="an-overview-of-ai-in-biology" class="level1">
+<h1>An Overview of AI in Biology</h1>
+<p><img src="images/clipboard-2977049208.png" class="img-fluid"></p>
+<p><em>A plain-language guide to what “AI” actually means, how it is used in the life sciences, what the main criticisms are, and what to watch out for if you want to use it in your own research. The picture above is a caricature, but it captures a real and growing split between <strong>popular AI</strong> and <strong>research ML</strong>, and that split is the thread running through this document.</em></p>
+<p><strong>Who this is for:</strong> biologists. You are assumed to be comfortable with university-level biology and statistics-adjacent ideas (a <em>t</em>-test, a PCA plot, a phylogenetic tree), but <strong>no programming knowledge is needed</strong>. Where a technical term appears for the first time it is explained, and there is a short <a href="#glossary">glossary</a> at the end.</p>
+<p>This is a write-up of a talk given on 8th of October 2026. You can also access our <a href="https://uoe-my.sharepoint.com/:f:/r/personal/achalka_ed_ac_uk/Documents/0.DRPHCB-AI%20Bioinformatician/Workshops-Presentations-Talks/2026-10-08%20An%20Overview%20of%20AI%20in%20Biology?d=wc2fb4342063e4445b420b89729acee7a&amp;csf=1&amp;web=1&amp;e=7jdABR">slides &amp; a recording</a>.</p>
+<hr>
+<section id="at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="at-a-glance">At a glance</h2>
+<ul>
+<li><strong>“AI” is an umbrella term</strong>, not a single technology. Chatbots, protein-structure predictors, self-driving cars and a random forest classifying bacterial isolates are all called “AI”, but they have very little in common.</li>
+<li><strong>Most of what makes headlines is one small corner of the field</strong>: large language models (LLMs) such as ChatGPT, Claude and Gemini. Most AI <em>in biology research</em> is something else: smaller, task-specific <strong>machine learning</strong> models trained on open scientific data.</li>
+<li><strong>Machine learning (ML) means learning rules from data</strong> instead of having an expert write the rules by hand. It is statistics plus algorithms, not magic, intelligence or consciousness.</li>
+<li>ML comes in two main <strong>learning styles</strong> (supervised and unsupervised) and two main <strong>families of algorithm</strong> (classical ML and deep learning). Knowing which of each you need is most of the battle.</li>
+<li>The big public criticisms of AI (energy use, stolen training data, cognitive decay) are mostly about <em>popular</em> AI. They apply to research ML in a different, usually milder, form, but research ML has its <strong>own pitfalls</strong>: biased data, overfitting, confusing correlation with causation, and poor reproducibility.</li>
+</ul>
+</section>
+</section>
+<section id="part-1-what-is-ai" class="level1">
+<h1>Part 1: What is AI?</h1>
+<section id="one-word-many-meanings" class="level2">
+<h2 class="anchored" data-anchor-id="one-word-many-meanings">1.1 One word, many meanings</h2>
+<p>Ask a room of people whether they have heard of any of the following and most will say yes to all of them:</p>
+<blockquote class="blockquote">
+<p>ChatGPT · AlphaFold · machine learning · an autonomous car · Skynet · Stable Diffusion · random forest · Siri</p>
+</blockquote>
+<p>All of these get filed under “AI”, yet “AI” is used in at least four different ways:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>“AI” as…</th>
+<th>What people mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>A cultural term</strong></td>
+<td>Science-fiction robots, utopian and dystopian futures</td>
+</tr>
+<tr class="even">
+<td><strong>A research field</strong></td>
+<td>A branch of computer science dating back to the 1950s</td>
+</tr>
+<tr class="odd">
+<td><strong>A shorthand for generative AI / LLMs</strong></td>
+<td>Anything that produces text or images on request</td>
+</tr>
+<tr class="even">
+<td><strong>A marketing term</strong></td>
+<td>“Now with AI!”, added to products to attract attention</td>
+</tr>
+</tbody>
+</table>
+<p>Much of the heated public discussion about AI is people arguing about <em>different subfields under the same umbrella</em>. It is a bit like arguing about whether “the microbiome” is healthy when one person means gut bacteria and another means soil fungi. Untangling the vocabulary comes first, and the easiest way to do that is to see where the field came from.</p>
+</section>
+<section id="a-short-history" class="level2">
+<h2 class="anchored" data-anchor-id="a-short-history">1.2 A short history</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Period</th>
+<th>What happened</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Antiquity</strong></td>
+<td>Myths of artificial beings: automata, golems, mechanical servants</td>
+<td>The <em>idea</em> is ancient, but it was fiction</td>
+</tr>
+<tr class="even">
+<td><strong>1940s–1950s</strong></td>
+<td>Alongside new ideas in neurobiology, researchers began to think of the brain as a kind of “neurological machine” that could be replicated. A mathematical model of the neuron appeared in 1943, and the term “artificial intelligence” was coined at a workshop at Dartmouth in 1956</td>
+<td>The modern field begins here</td>
+</tr>
+<tr class="odd">
+<td><strong>1970s–1980s</strong></td>
+<td><strong>Expert systems</strong>: experts write down rules, the computer follows them. A famous biomedical example is MYCIN, which recommended antibiotics for bacterial infections</td>
+<td>Works for narrow, well-defined problems, but is brittle and limited (see below)</td>
+</tr>
+<tr class="even">
+<td><strong>1980s–1990s</strong></td>
+<td><strong>Machine learning</strong> (the term dates from 1959) gathers momentum as a subfield: give the computer data and statistical algorithms and let it work out the rules itself</td>
+<td>A direct answer to the limits of expert systems, but computationally prohibitive at the time</td>
+</tr>
+<tr class="odd">
+<td><strong>2000s</strong></td>
+<td>Computing power increases exponentially, and “big data” arrives (the web, social media and, in biology, high-throughput sequencing)</td>
+<td>A <strong>machine-learning boom</strong>.</td>
+</tr>
+<tr class="even">
+<td><strong>2010s</strong></td>
+<td><strong>Deep learning</strong> (a subfield of ML) takes off, helped by GPUs (graphics chips that happen to be excellent at the maths involved). Deep learning in turn leads to <strong>generative AI</strong> and then LLMs. The <em>transformer</em> architecture appears in 2017</td>
+<td>Models keep improving as you feed them more data</td>
+</tr>
+<tr class="odd">
+<td><strong>2020s</strong></td>
+<td>GPT-3 (2020); AlphaFold 2 solves much of the protein-folding prediction problem (2020–21); ChatGPT launches publicly in late 2022; the 2024 Nobel Prizes recognise both AlphaFold and neural-network research</td>
+<td>We’re here</td>
+</tr>
+</tbody>
+</table>
+<section id="why-expert-systems-ran-out-of-road" class="level3">
+<h3 class="anchored" data-anchor-id="why-expert-systems-ran-out-of-road">Why expert systems ran out of road</h3>
+<p>Expert systems were “top-down”: an expert defines the rules and the machine follows them blindly. If you want a car to drive on a road, give it the entire Highway Code and it should obey.</p>
+<p>The problem is that things that feel intuitive to humans are astonishingly hard to write down as rules. <strong>Try describing a cat in such analytical detail that an alien reading your instructions could pick one out of a line-up without ever confusing it with a dog.</strong> Whatever rules you write, there will be a cat that breaks them. Biologists will recognise the same problem from writing species keys: the more variable the organisms, the faster a rigid set of rules breaks down.</p>
+<p>Machine learning flips the approach around. Instead of writing the rules, you show the computer many examples and let it find the rules, then you check whether the rules it found are any good.</p>
+</section>
+</section>
+<section id="demystifying-ai" class="level2">
+<h2 class="anchored" data-anchor-id="demystifying-ai">1.3 Demystifying “AI”</h2>
+<p>So what <em>is</em> AI? Is it magic? Is it intelligent? Is it conscious?</p>
+<p><strong>No.&nbsp;It is statistics, big data and pre-defined methods called algorithms.</strong></p>
+<ul>
+<li>An <strong>algorithm</strong> is a fixed recipe: a defined sequence of steps.</li>
+<li>A <strong>model</strong> is what you get when an algorithm has been run on data. It is the set of learned rules that turns an input into an output. What those rules look like depends on the algorithm: for a decision tree they are the yes/no splits, while for a neural network they are millions or billions of numbers called <em>parameters</em>.</li>
+</ul>
+<p>The old and new approaches differ in where the rules come from:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Expert systems (old, top-down)</strong></th>
+<th><strong>Machine learning (new, bottom-up)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Who writes the rules?</td>
+<td>A human expert</td>
+<td>The algorithm, from the data it is given</td>
+</tr>
+<tr class="even">
+<td>Ingredients</td>
+<td>Rules + data → answers</td>
+<td>Data (+ known answers) + algorithm → <strong>rules</strong></td>
+</tr>
+<tr class="odd">
+<td>The rules then…</td>
+<td>…are applied to new data</td>
+<td>…are applied to new data to produce predictions</td>
+</tr>
+</tbody>
+</table>
+<p>If you remember one sentence from this section, make it this one: <strong>in machine learning, input data and an algorithm create the rules, and the rules determine the output.</strong></p>
+</section>
+<section id="a-very-rough-family-tree-of-ai" class="level2">
+<h2 class="anchored" data-anchor-id="a-very-rough-family-tree-of-ai">1.4 A (very rough) family tree of AI</h2>
+<p>Anyone who has built a phylogeny knows the difficulty: the tree you get depends on which characters you choose. AI has the same problem. You could divide the field by <em>how it learns</em>, <em>what it outputs</em>, <em>what data it uses</em>, and so on. The field is also young and moving fast, so categories overlap and the terminology is fuzzy. The tree below is therefore <strong>incomplete and approximate</strong>, but it is a good map for getting started.</p>
+<p><img src="images/clipboard-2225298290.png" class="img-fluid"></p>
+<p>The key observation is that <strong>“mainstream” AI occupies a small corner of a much larger field</strong>. Most of the branches above (and most of the AI used in biology) never make the news.</p>
+</section>
+<section id="classical-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="classical-machine-learning">1.5 Classical machine learning</h2>
+<section id="how-does-a-machine-learn-the-rules" class="level3">
+<h3 class="anchored" data-anchor-id="how-does-a-machine-learn-the-rules">How does a machine learn the rules?</h3>
+<p>There are many algorithms, and many ways of categorising them. Broadly, they fall into two families:</p>
+<ul>
+<li><strong>Classical machine learning</strong>: traditional statistical algorithms, in use since roughly the 1990s (regression is much older) and still very much alive. Typically used on smaller datasets.</li>
+<li><strong>Deep learning</strong>: neural networks, loosely inspired by the brain. Better suited to large, complex datasets. (See <a href="#17-deep-learning">section 1.7</a>.)</li>
+</ul>
+</section>
+<section id="a-plain-language-tour-of-common-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="a-plain-language-tour-of-common-algorithms">A plain-language tour of common algorithms</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Algorithm</th>
+<th>In plain language</th>
+<th>A biological use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Linear regression</strong></td>
+<td>Fit a straight-line relationship between inputs and a number</td>
+<td>Standard curves; predicting a trait from covariates</td>
+</tr>
+<tr class="even">
+<td><strong>Logistic regression</strong></td>
+<td>As above, but predicts a yes/no outcome as a probability</td>
+<td>Resistant vs.&nbsp;susceptible; disease vs.&nbsp;healthy</td>
+</tr>
+<tr class="odd">
+<td><strong>Decision tree</strong></td>
+<td>A flowchart of yes/no questions: “Is gene A present? If yes, is gene B present?…” Essentially a <strong>dichotomous key</strong></td>
+<td>Classifying isolates by presence/absence of genes</td>
+</tr>
+<tr class="even">
+<td><strong>Random forest</strong></td>
+<td>Hundreds of decision trees that each “vote”; the majority wins</td>
+<td>Genotype → phenotype prediction; microbiome classification</td>
+</tr>
+<tr class="odd">
+<td><strong>Support vector machine (SVM)</strong></td>
+<td>Finds the boundary that best separates two groups</td>
+<td>Classifying tumour subtypes from expression data</td>
+</tr>
+<tr class="even">
+<td><strong>Clustering</strong> (e.g.&nbsp;k-means, hierarchical)</td>
+<td>Groups similar samples together without being told the groups</td>
+<td>Cell types in single-cell data; patient subgroups</td>
+</tr>
+<tr class="odd">
+<td><strong>PCA</strong></td>
+<td>Compresses many variables into a few informative axes</td>
+<td>Population structure in genotype data</td>
+</tr>
+<tr class="even">
+<td><strong>Bayesian models</strong></td>
+<td>Update a prior belief using the observed data</td>
+<td>Many phylogenetic and population-genetic methods</td>
+</tr>
+</tbody>
+</table>
+<p>Decision trees are worth singling out, because they are the building block of many popular classical algorithms (random forests, gradient boosting). Picture a starting point, a yes/no question, another yes/no question, and a decision at the end. Each individual block is very simple.</p>
+</section>
+<section id="strengths-and-limits" class="level3">
+<h3 class="anchored" data-anchor-id="strengths-and-limits">Strengths and limits</h3>
+<p>Classical ML is simple <em>compared with the rest of the field</em>, not simple in absolute terms. Its main attractions are:</p>
+<ul>
+<li><strong>Interpretable.</strong> You can trace back how a decision was made and ask whether the rules make biological sense, or whether you have built something nonsensical.</li>
+<li><strong>Cheap.</strong> Classical models are far less resource-intensive to train and test. A recently published bacteriophage-host prediction model was trained in about six hours on a 2019 laptop. You do not need a supercomputer.</li>
+</ul>
+<p>Its weakness is <strong>scale and complexity</strong>. As relationships get more complicated and data grows, classical models tend to plateau: past a certain point, feeding them more data barely helps (diminishing returns). A complex problem like predicting a protein’s 3D structure from its sequence is beyond what classical methods can handle well.</p>
+</section>
+<section id="worked-example-antimicrobial-resistance-amr" class="level3">
+<h3 class="anchored" data-anchor-id="worked-example-antimicrobial-resistance-amr">Worked example: antimicrobial resistance (AMR)</h3>
+<p>Bacteria can be resistant to antibiotics, and we want to know which genes confer that resistance. A machine-learning framing looks like this:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>What it is</th>
+<th>In the AMR example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Input</strong> (called <em>features</em>)</td>
+<td>The data you start with</td>
+<td>Genotype: which resistance genes or mutations each isolate carries, plus metadata such as species</td>
+</tr>
+<tr class="even">
+<td><strong>Output</strong> (called the <em>label</em> or target)</td>
+<td>What you want to predict</td>
+<td>Phenotype: the minimum inhibitory concentration (MIC), or simply resistant / susceptible</td>
+</tr>
+</tbody>
+</table>
+<p><strong>To train a model you need both</strong>: a set of isolates for which you know the genotype <em>and</em> the measured phenotype. The algorithm learns the link between the two. Once trained, you give the model a new isolate’s genotype and it predicts the phenotype, and the model can be built in either direction.</p>
+<p>Many published studies do exactly this, but that <strong>even a “solved” problem leaves room for new work</strong>: you can use different datasets, different methods, or look at the problem from a different angle.</p>
+</section>
+<section id="generalising-from-genotype-phenotype-to-any-x-y" class="level3">
+<h3 class="anchored" data-anchor-id="generalising-from-genotype-phenotype-to-any-x-y">Generalising: from genotype → phenotype to any x → y</h3>
+<p>Nothing about this recipe is specific to bacteria or resistance. If you can describe your problem as “I have measurements <strong>x</strong> and I want to predict outcome <strong>y</strong>”, and you have matched examples of both, you can build a model. Plant biologists use it to predict whether a rose petal will be white or red from genes and environment. Other examples cited in the talk:</p>
+<ul>
+<li><strong>Protein function</strong> predicted from amino-acid sequence alone</li>
+<li><strong>SNP discovery</strong></li>
+<li><strong>Crop yield prediction</strong>, which uses not just experimental data but also weather and other environmental features</li>
+<li><strong>Source attribution of foodborne bacteria</strong>: given a <em>Salmonella</em> genome, which animal, region or host did it likely come from?</li>
+<li><strong>Host prediction for viruses</strong>: matching metagenome-derived viruses of archaea and bacteria to their hosts</li>
+<li><strong>Plant genotype-to-phenotype prediction</strong></li>
+</ul>
+</section>
+<section id="what-if-you-dont-have-y" class="level3">
+<h3 class="anchored" data-anchor-id="what-if-you-dont-have-y">What if you don’t have y?</h3>
+<p>Sometimes you have only <strong>x</strong>: lots of data, but no labelled outcome. <strong>You can still use ML</strong>, for example to ask whether your samples fall into natural groups.</p>
+<p>An example is discovering patient clusters from genetic signatures, and analysing population structure.</p>
+</section>
+</section>
+<section id="supervised-vs.-unsupervised-learning" class="level2">
+<h2 class="anchored" data-anchor-id="supervised-vs.-unsupervised-learning">1.6 Supervised vs.&nbsp;unsupervised learning</h2>
+<p>Most of classical ML can be sorted into two learning styles:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Supervised learning</strong></th>
+<th><strong>Unsupervised learning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Goal</strong></td>
+<td><strong>Predict a value</strong> from structured, labelled data</td>
+<td><strong>Find structure</strong>: classify or split unlabelled data</td>
+</tr>
+<tr class="even">
+<td><strong>You need</strong></td>
+<td>Inputs <em>and</em> known outputs (x and y)</td>
+<td>Inputs only (x)</td>
+</tr>
+<tr class="odd">
+<td><strong>Typical question</strong></td>
+<td>“Given this genome, will the isolate be resistant?”</td>
+<td>“Do these samples cluster together? Is there population structure I didn’t know about?”</td>
+</tr>
+<tr class="even">
+<td><strong>How it works</strong></td>
+<td>Train on labelled data, then test on data the model has not seen</td>
+<td>Algorithm looks for patterns on its own</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Rule of thumb:</strong> if you can already say what you want to predict, you probably need supervised learning. If you first want to <em>look</em> for structure, start with unsupervised.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Beyond the two:</strong> these are the main styles, not the only ones. <em>Self-supervised learning</em> (a common label for the “unsupervised” training of LLMs and protein language models such as ESM) creates its own labels from the data, for example by hiding a word or amino acid and asking the model to predict it. <em>Reinforcement learning</em> trains a model by trial and error against a reward signal, and is one of the steps used to tune chatbots to follow human preferences. <em>Semi-supervised learning</em> mixes a little labelled data with a lot of unlabelled data.</p>
+</blockquote>
+<section id="where-ml-is-used-across-biology" class="level3">
+<h3 class="anchored" data-anchor-id="where-ml-is-used-across-biology">Where ML is used across biology</h3>
+<p>If you can frame your problem as data in, answer out, ML can probably be applied to it. Some representative areas:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Area</th>
+<th>Example tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Proteomics and metabolomics</strong></td>
+<td>Protein function, protein family, conservation, folding; metabolic networks. Input can be amino-acid or DNA sequence</td>
+</tr>
+<tr class="even">
+<td><strong>Genomics</strong></td>
+<td>Gene expression analysis; SNP identification; gene calling and annotation (many tools now use ML)</td>
+</tr>
+<tr class="odd">
+<td><strong>Systems biology</strong></td>
+<td>Network modelling; predicting cell–cell interactions</td>
+</tr>
+<tr class="even">
+<td><strong>Agriculture and applied biology</strong></td>
+<td>Crop yield prediction; pest management; disease prediction</td>
+</tr>
+<tr class="odd">
+<td><strong>Medicine</strong></td>
+<td>Cancer diagnosis and subtyping; personalised treatment</td>
+</tr>
+<tr class="even">
+<td><strong>Ecology and environmental biology</strong></td>
+<td>Climate-impact modelling; species distribution models</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="applying-this-to-your-own-research" class="level3">
+<h3 class="anchored" data-anchor-id="applying-this-to-your-own-research">Applying this to your own research</h3>
+<p>Two questions get you started:</p>
+<ol type="1">
+<li><strong>What data do I have, and what do I want to get out of it?</strong> That decides between supervised and unsupervised approaches (or a mixture of both).</li>
+<li><strong>Does a tool already exist?</strong> Search the literature with keywords like “machine learning” or “deep learning” plus your topic. If nothing suits you, you can build a model yourself using one of the approaches above.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="deep-learning" class="level2">
+<h2 class="anchored" data-anchor-id="deep-learning">1.7 Deep learning</h2>
+<p>Everything said so far about supervised vs.&nbsp;unsupervised learning, building models and applying them to biology <strong>also applies to deep learning</strong>. Deep learning is a different way of <em>building</em> the model, not a different kind of task. Instead of decision trees or regression, deep learning uses <strong>neural networks</strong>.</p>
+<section id="what-is-a-neural-network" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-neural-network">What is a neural network?</h3>
+<p>A neural network is a highly simplified, loosely brain-inspired structure: layers of interconnected “neurons”, each of which takes in numbers, combines them and passes a result on. The layers are:</p>
+<pre><code> Input layer  →  Hidden layer(s)  →  Output layer
+ (your data)     (the "thinking")    (the prediction)</code></pre>
+<p>The more hidden layers, the <em>deeper</em> the network, and <strong>deep learning</strong> is the practice of using networks with many, many layers.</p>
+<p>When a network is trained, every connection has a number attached, called a <strong>weight</strong> (more generally, a <em>parameter</em>), which controls how strongly one neuron influences the next. Training starts from a blank canvas and gradually nudges each weight up or down until the network’s predictions become good. You can think of the weights as being like the fitted coefficients in a regression, except that there are millions or billions of them rather than a handful. The trained collection of weights <em>is</em> the model, and this is what people mean by “open-weight” models later on.</p>
+</section>
+<section id="why-deep-learning-is-called-a-black-box" class="level3">
+<h3 class="anchored" data-anchor-id="why-deep-learning-is-called-a-black-box">Why deep learning is called a “black box”</h3>
+<p>Compare how a decision tree and a neural network handle the same inputs (say the presence or absence of genes A, B and C):</p>
+<ul>
+<li><strong>Decision tree:</strong> “Is gene A present? Yes → is gene B present? No → predict <em>susceptible</em>.” You can read the logic back and judge whether it makes biological sense.</li>
+<li><strong>Neural network:</strong> “Take the value of gene A, multiply it by 5; because B is present, take a square root of the result; add 42…” and so on across dozens of layers. Why those particular operations? <em>They simply work.</em> It is extremely hard to derive any biological meaning from the arithmetic.</li>
+</ul>
+<p>This is why deep learning is described as a <strong>black box</strong>. The data is “encoded” in ways that are incomprehensible to us. That makes deep learning <strong>excellent when you care about the result and less appealing when you care about the underlying logic</strong>. If a model predicts a protein’s structure accurately, you may not care how it did it. If it predicts which gene causes resistance, you probably do.</p>
+</section>
+<section id="deep-learning-is-ideal-for-large-data-and-complex-relationships" class="level3">
+<h3 class="anchored" data-anchor-id="deep-learning-is-ideal-for-large-data-and-complex-relationships">Deep learning is ideal for large data and complex relationships</h3>
+<p>Deep learning really shines where classical ML plateaus. Prominent biological examples include:</p>
+<ul>
+<li><strong>AlphaFold</strong>: predicts a folded 3D protein structure from an amino-acid sequence.</li>
+<li><strong>ESM</strong>: “protein language models” trained on hundreds of millions of protein sequences (the 2021 paper used 250 million), from which information about biological structure and function emerges.</li>
+<li><strong>DeepVariant</strong>: a Google tool that detects genetic variants (SNPs and small indels) in sequencing data.</li>
+</ul>
+<p>Different network <em>architectures</em> suit different kinds of biological data:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Architecture</th>
+<th>Suited to</th>
+<th>Biological example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Multilayer perceptron</strong> (the basic network)</td>
+<td>Tabular inputs</td>
+<td>Predicting toxicity from a molecule’s properties</td>
+</tr>
+<tr class="even">
+<td><strong>Convolutional neural network (CNN)</strong></td>
+<td>Images and image-like data</td>
+<td>Microscopy images; DeepVariant treats sequencing reads as images</td>
+</tr>
+<tr class="odd">
+<td><strong>Recurrent network / transformer</strong></td>
+<td>Sequences, where order matters</td>
+<td>DNA sequence → transcription-factor binding; protein sequences; text</td>
+</tr>
+<tr class="even">
+<td><strong>Graph neural network</strong></td>
+<td>Networks and relationships</td>
+<td>Protein–protein interaction networks; molecular structures</td>
+</tr>
+<tr class="odd">
+<td><strong>Autoencoder</strong></td>
+<td>Compressing data into a compact “latent representation”</td>
+<td>Learning a compact encoding of protein sequences</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="discriminative-vs.-generative-models" class="level2">
+<h2 class="anchored" data-anchor-id="discriminative-vs.-generative-models">1.8 Discriminative vs.&nbsp;generative models</h2>
+<p>There is another useful way to divide models: by what they learn about the data.</p>
+<ul>
+<li><strong>Discriminative models</strong> learn the <strong>decision boundary between classes</strong>: “is this a cat or a dog?”</li>
+<li><strong>Generative models</strong> learn the <strong>distribution of the inputs themselves</strong>: “what does a cat look like?”</li>
+</ul>
+<p>Generative models are, first and foremost, a way of modelling and sampling from the data itself, and they are not limited to deep learning (the profile hidden Markov models behind tools like HMMER are generative models too). a reason why we care about generation is data quality. To train a good model you need a <strong>representative dataset</strong>, encoded in a way that preserves the relationships between its parts. You would not train a model of tomato yield on data about peas. And if you build a disease model using data from only one part of the population, the model will not work well for everyone else.</p>
+<p>But how do you know whether your dataset and encoding are any good? One heuristic is to <strong>ask the model to generate new data</strong> based on what it has learned:</p>
+<ul>
+<li>If the generated output is <strong>comprehensible and plausible</strong>, the input data and encoding were probably good.</li>
+<li>If the output is <strong>incomprehensible</strong>, go back to the drawing board.</li>
+</ul>
+<p>This is a more demanding demonstration of learning, just as it is harder to <em>draw or describe</em> a cat than to <em>recognise</em> one.</p>
+<p>Generative AI grew from this idea, and it is now used in biology too: designing new proteins, generating candidate drug-like molecules, and DNA/protein “language models” that can write plausible new sequences. In practice the boundary between the two categories is blurry, which is a reminder that the family tree in <a href="#14-a-very-rough-family-tree-of-ai">section 1.4</a> is a guide, not a rulebook.</p>
+</section>
+<section id="large-language-models-llms" class="level2">
+<h2 class="anchored" data-anchor-id="large-language-models-llms">1.9 Large language models (LLMs)</h2>
+<p>Language is just another type of data, so why not apply the generative approach to it? The field of <strong>natural language processing</strong> builds models that can perform operations on language. Assemble an enormous, representative language dataset (books, forum posts, websites, recipes, whatever is available), train a generative deep-learning model on it, and you have a <strong>large language model</strong>.</p>
+<p>The architecture that defined the early LLMs is the <strong>Generative Pre-trained Transformer (GPT)</strong>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Letter</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>G</strong>enerative</td>
+<td>It can create new text</td>
+</tr>
+<tr class="even">
+<td><strong>P</strong>re-trained</td>
+<td>It is first trained on a very large existing body of text</td>
+</tr>
+<tr class="odd">
+<td><strong>T</strong>ransformer</td>
+<td>The type of neural network used, which is good at sequential data, where order matters (words in a paragraph, or residues in a protein)</td>
+</tr>
+</tbody>
+</table>
+<p>Put together, you get tools like ChatGPT. (Newer models have more complicated architectures, but transformers remain the core.)</p>
+<p><strong>What made LLMs take off</strong> was a surprise: they turned out to be unexpectedly good at <em>following instructions</em>. They did not just continue a paragraph with something plausible. You could ask one to “rephrase this more formally”, “summarise this” or “collate these points”, and it would. Later training stages, including fine-tuning on human feedback, made this much stronger. That ability is what allowed LLMs to be commercialised in so many products.</p>
+<p><strong>The catch: hallucination is inherent.</strong> An LLM is optimised to produce <em>plausible</em> text, not <em>accurate</em> text. At bottom it is a very sophisticated next-word predictor, with no built-in mechanism for checking whether what it says is true. (Whether that amounts to anything like understanding is debated, but the practical lesson is not.) This means LLMs will happily produce:</p>
+<ul>
+<li>references that do not exist,</li>
+<li>confident but wrong statements about a gene or pathway,</li>
+<li>protocols that read well but are subtly wrong.</li>
+</ul>
+<p>Treat an LLM as a fluent first-draft generator, <strong>never as a database or a source of record</strong>, and verify anything that matters.</p>
+</section>
+<section id="two-worlds-mainstream-ai-vs.-research-ml" class="level2">
+<h2 class="anchored" data-anchor-id="two-worlds-mainstream-ai-vs.-research-ml">1.10 Two worlds: mainstream AI vs.&nbsp;research ML</h2>
+<p>Step back and the picture is clear. <strong>“Mainstream” AI equals LLMs and their generative cousins.</strong> They are defined by enormous datasets, enormous models, enormous compute, commercial deployment, and a generalist approach.</p>
+<p>That can be intimidating if you want to use AI in your research (“do I need a data centre?”). The answer is <strong>no</strong>. Research-scale ML looks very different:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Mainstream AI (LLMs)</strong></th>
+<th><strong>Research-scale ML</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data</strong></td>
+<td>Enormous, scraped at scale</td>
+<td>Typically smaller and often <strong>open datasets</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Models</strong></td>
+<td>Enormous</td>
+<td>Smaller overall</td>
+</tr>
+<tr class="odd">
+<td><strong>Compute</strong></td>
+<td>Large data centres</td>
+<td>A workstation or a share of an HPC (high-performance computing) cluster</td>
+</tr>
+<tr class="even">
+<td><strong>Purpose</strong></td>
+<td>Commercial, <strong>generalist</strong></td>
+<td><strong>Task-specific</strong>, trained around a scientific question</td>
+</tr>
+</tbody>
+</table>
+<section id="quick-quiz-where-do-popular-tools-sit" class="level3">
+<h3 class="anchored" data-anchor-id="quick-quiz-where-do-popular-tools-sit">Quick quiz: where do popular tools sit?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>What it does</th>
+<th>Where it falls</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ChatGPT, Claude, Gemini, Microsoft Copilot</td>
+<td>Chatbots that generate text</td>
+<td><strong>LLMs</strong> (mainstream, closed-source)</td>
+</tr>
+<tr class="even">
+<td>DeepSeek, Qwen, Gemma</td>
+<td>Chatbots that generate text</td>
+<td><strong>LLM</strong> (open-weight, see Part 2)</td>
+</tr>
+<tr class="odd">
+<td>Stable Diffusion</td>
+<td>Creates images from text prompts</td>
+<td><strong>Generative model</strong> (images)</td>
+</tr>
+<tr class="even">
+<td>ElevenLabs</td>
+<td>Produces synthetic voices (and more)</td>
+<td><strong>Generative model</strong> (audio)</td>
+</tr>
+<tr class="odd">
+<td>DeepL</td>
+<td>Translates text between languages</td>
+<td>Language-model-based translation, a close cousin of LLMs</td>
+</tr>
+<tr class="even">
+<td>AlphaFold</td>
+<td>Amino-acid sequence → folded protein</td>
+<td><strong>Deep learning</strong> (research)</td>
+</tr>
+<tr class="odd">
+<td>DeepVariant</td>
+<td>Detects SNPs in sequencing data</td>
+<td><strong>Deep learning</strong> (research)</td>
+</tr>
+<tr class="even">
+<td>ESM</td>
+<td>Protein language models</td>
+<td><strong>Deep learning</strong> (research), a transformer trained on hundreds of millions of sequences</td>
+</tr>
+</tbody>
+</table>
+<p>The mainstream tools dominate the conversation, so it is easy to get a skewed picture. Many of the “hot” research papers are indeed about deep learning, but <strong>the vast majority of the studies mentioned in Part 1 use classical machine learning and discriminative models</strong>. These are small-scale, quiet and specialised, so they are hard to discuss individually.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="part-2-ai-usage-and-its-criticisms" class="level1">
+<h1>Part 2: AI usage and its criticisms</h1>
+<section id="the-mood" class="level2">
+<h2 class="anchored" data-anchor-id="the-mood">2.1 The mood</h2>
+<p>Public opinion on AI ranges from optimism to pessimism. Remember that in popular discourse “AI” is usually shorthand for <strong>LLMs</strong>. The debate is also tangled up with the economy, geopolitics and a wider sentiments with the tech industry, so supporters and critics often express sentiments about <em>Big Tech as a whole</em> rather than about the technology itself.</p>
+<p>To keep things manageable, here are three commonly cited <strong>benefits</strong> and the <strong>criticism</strong> that goes with each:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Benefit</th>
+<th>The matching criticism</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Automating tedious tasks</strong></td>
+<td>…but it is <strong>energy-intensive</strong>, even for seemingly trivial jobs</td>
+</tr>
+<tr class="even">
+<td><strong>Lowering technical barriers and democratising knowledge</strong> (for example, helping a non-programmer write a short script or command-line command)</td>
+<td>…but that knowledge came from models <strong>trained on stolen / copyrighted data</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>A sounding board</strong> for brainstorming and drafting</td>
+<td>…but it can <strong>make you stupid</strong> (“cognitive decay”)</td>
+</tr>
+</tbody>
+</table>
+<p>This leads to two questions that structure the rest of this part:</p>
+<ol type="1">
+<li><strong>How can LLMs be used ethically</strong>, as a user, and are there “more ethical” models?</li>
+<li><strong>Do these criticisms apply to machine-learning research?</strong> And if not, what are the <em>other</em> pitfalls?</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Closed vs.&nbsp;open models.</strong> Tools like ChatGPT, Claude and Gemini are <strong>closed-source</strong>: you use them through a browser or an API (a programmatic connection), and you <strong>cannot download the model or run it yourself</strong>. Everything you type goes to the company’s servers. Most of the public debate is about these closed models, and the distinction matters for data privacy and energy use, as we’ll see.</p>
+</blockquote>
+</section>
+<section id="energy-usage" class="level2">
+<h2 class="anchored" data-anchor-id="energy-usage">2.2 Energy usage</h2>
+<ul>
+<li>LLMs are <strong>computationally intensive</strong>, and therefore energy-hungry. “Frontier” (newest, most capable) models need specialist, high-end servers both to <em>train</em> and to <em>run</em>. Closed frontier models cannot be downloaded at all, and even the largest open-weights models need server-grade hardware rather than a laptop or a high-end gaming PC.</li>
+<li><strong>Efficiency gains are real</strong>: newer models and training methods use less energy per query, and some labs, notably several Chinese ones such as DeepSeek, have made efficiency a selling point. Novel data-centre designs, including offshore and wind-powered ones, are being trialled.</li>
+<li><strong>But gains are offset by rising demand.</strong> Even if each query costs less, more people making more queries means total energy use keeps climbing. (Economists call this the <em>Jevons paradox</em>.)</li>
+<li><strong>Demand is subsidised.</strong> Users generally do not pay the “true” cost of a query, which encourages casual use.</li>
+</ul>
+<p>Does that mean we should never use these tools? New technologies are often clunkier and more power-hungry in their early years. A more useful approach is to weigh <strong>comparison and necessity</strong>: <em>is there a better or cheaper way to do this, and how much value does this task produce?</em> Consider whether any of the following justifies the energy:</p>
+<ul>
+<li>Outputting a simple bash (command-line) command</li>
+<li>Summarising an email</li>
+<li>Turning a bullet-point list into a formal academic draft</li>
+<li>Using it as a sounding board</li>
+<li>Writing a small Python script</li>
+</ul>
+<p>There is no single right answer, and it depends partly on whether you are a technical or non-technical user. If you could do a task with your eyes closed, the energy cost is hard to justify. If it would otherwise take hours of struggle and the tool helps you learn, it may be more defensible. <strong>The question to ask is: what is the resource cost of this task relative to the value it produces?</strong></p>
+</section>
+<section id="trained-on-stolen-copyrighted-data" class="level2">
+<h2 class="anchored" data-anchor-id="trained-on-stolen-copyrighted-data">2.3 “Trained on stolen / copyrighted data”</h2>
+<p><strong>Short answer: yes.</strong> Large language models were trained on vast amounts of copyrighted material, including pirated books.</p>
+<p><strong>Longer answer:</strong> in a prominent 2025 US ruling (<em>Bartz v. Anthropic</em>), a district court held that training on <em>lawfully acquired</em> books was “fair use”, but that downloading and keeping <em>pirated copies</em> was not. The case then settled for a reported $1.5 billion, so the ruling was never tested on appeal and is not settled law. Many other lawsuits across text, image and music generators are ongoing, and courts have not all reached the same conclusions, so the legal picture may change. And it is precisely this ethically dubious data that gives LLMs their breadth of knowledge.</p>
+<p>Related issues scientists should be aware of:</p>
+<ul>
+<li><strong>Your conversations may be used to refine the model.</strong> With commercial LLMs, whatever you type may be used for further training. Think carefully about what data you give them: <strong>unpublished results, patient-identifiable or clinical data, and confidential or collaborator data should not be pasted into closed commercial tools</strong> unless your institution has approved the specific service. Check your institutional policy and the tool’s data settings.</li>
+<li><strong>Human labour is still needed for data annotation.</strong> Models are improved by people rating their outputs. Annotators with scarce expert skills in wealthy countries can be paid well; in the developing world the pay is often very low for very similar work, and the content can be distressing. This raises the question: <strong>what level of labour exploitation is tolerable?</strong></li>
+</ul>
+<p>None of this is unique to AI. Phones, for example, are built using minerals mined under exploitative conditions. The point is not that the technology is inherently bad, but that <strong>it tends to exacerbate existing faults in society</strong>, particularly in labour relations and politics. Commercial profit motives make it worse.</p>
+</section>
+<section id="it-makes-you-stupid-cognitive-decay" class="level2">
+<h2 class="anchored" data-anchor-id="it-makes-you-stupid-cognitive-decay">2.4 “It makes you stupid” (cognitive decay)</h2>
+<p><strong>To an extent, yes.</strong> The brain operates on a “use it or lose it” basis. The helpful comparison is a <strong>calculator</strong>: most of us would reach for one to multiply 12 × 23, but if the calculator broke, we could still work it out on paper, just slower. The test for using an LLM is the same: <em>if it broke, could I still reason my way through this?</em></p>
+<p>The effect depends on <strong>what mental process you are offloading</strong>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Example prompt</th>
+<th>What you are offloading</th>
+<th>How helpful?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“Write an essay on X”</td>
+<td>The whole task: framing, structure <em>and</em> thinking</td>
+<td>Least helpful. You retain almost nothing, and the result is generic</td>
+</tr>
+<tr class="even">
+<td>“Brainstorm five approaches to X, taking Y and Z into account” (with your own reasoning written out for the model)</td>
+<td>Idea generation only. You supply the framing and judge the results</td>
+<td>More helpful. You stay in the driving seat</td>
+</tr>
+<tr class="odd">
+<td>“Create a paragraph from these bullet points”</td>
+<td>Wording, not ideas</td>
+<td>Reasonable, as long as you critically edit the result</td>
+</tr>
+<tr class="even">
+<td>“Make this draft more formal”</td>
+<td>Polish and register</td>
+<td>Reasonable. Compare against the original and decide what to keep</td>
+</tr>
+<tr class="odd">
+<td>“Fix my prepositions please, I barely passed my English grammar tests”</td>
+<td>A language skill you may want to build yourself</td>
+<td>Fine as a one-off; if it becomes a habit, you never improve</td>
+</tr>
+</tbody>
+</table>
+<p>Two further points:</p>
+<ul>
+<li><strong>Developing brains are affected more.</strong> This is why there is extra controversy about children and teenagers using LLMs: it is the stage when skills are being built, and just as children are taught to do sums by hand before being handed a calculator, offloading too early may stunt them.</li>
+<li><strong>Scientific research on the long-term effects is still in its infancy</strong>, and early studies are small, so treat headline claims in either direction with caution.</li>
+</ul>
+<p>Whatever you use an LLM for, <strong>critically examine the output</strong>, both to avoid putting nonsense in your work and to keep your own skills intact.</p>
+</section>
+<section id="open-and-local-llms-a-more-ethical-approach" class="level2">
+<h2 class="anchored" data-anchor-id="open-and-local-llms-a-more-ethical-approach">2.5 Open and local LLMs: a more ethical approach?</h2>
+<p>If closed commercial models are the problem, are there alternatives? Yes, though with caveats. First, some definitions. They are often confused:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>What you get</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Closed-source</strong></td>
+<td>Access through a browser or API only</td>
+<td>ChatGPT, Claude, Gemini, Copilot. You cannot download or inspect the model</td>
+</tr>
+<tr class="even">
+<td><strong>Open-weights</strong></td>
+<td>The model’s <strong>parameters</strong> only (essentially “the model file”)</td>
+<td>The <strong>most common</strong> form of “open” model. You can download and run it, but may not have the training data or the full training code. Examples: Qwen, DeepSeek, Mistral (France), Llama, Gemma</td>
+</tr>
+<tr class="odd">
+<td><strong>Open-source</strong></td>
+<td>The training <strong>code, data and parameters</strong></td>
+<td>Genuinely rare. Fully open examples exist (e.g.&nbsp;OLMo from the Allen Institute for AI)</td>
+</tr>
+<tr class="even">
+<td><strong>Local</strong></td>
+<td>Runs <strong>on your own machine</strong>, fully private and offline</td>
+<td>Not a licensing term but a way of <em>using</em> an open-weights model</td>
+</tr>
+</tbody>
+</table>
+<p>Open-weights models come in many shapes and sizes. Some can be inspected to a degree, they offer more transparency than closed ones, and their use has been rising. That is positive, because it hands users more control.</p>
+<section id="do-they-fix-the-three-criticisms" class="level3">
+<h3 class="anchored" data-anchor-id="do-they-fix-the-three-criticisms">Do they fix the three criticisms?</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criticism</th>
+<th>Open / local LLMs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Energy usage</strong></td>
+<td>Usually <strong>smaller and more efficient</strong>, partly because they are born out of constraint: developers without huge budgets or unable to buy the newest chips, so they are forced to be efficient. “Large” versions still need specialist servers; others run on a laptop or even a smartphone. You can host locally (cheap, and you pay your own electricity bill directly) or on a private cloud machine (more expensive, but you still pay the cost)</td>
+</tr>
+<tr class="even">
+<td><strong>Stolen data</strong></td>
+<td><strong>It depends, and it is mostly unknown.</strong> The training data for open-weights models is often not disclosed. Developers of some open-weights models have also been accused by frontier labs of “stealing” from frontier models by training on their outputs, an accusation that some observers find ironic given the criticisms of how the frontier models themselves were trained</td>
+</tr>
+<tr class="odd">
+<td><strong>Cognitive decay</strong></td>
+<td>Open models tend to be <strong>less capable</strong> (depending on size), so you often have to write a more careful prompt and check the answer more critically. Paradoxically, this forces more attention and may help a little</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verdict:</strong> open and local models are not a panacea, but they are a good alternative. They shift some control back to the user, particularly over <strong>privacy</strong> (nothing leaves your machine) and <strong>energy</strong>.</p>
+</section>
+<section id="how-to-get-started" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-get-started">How to get started</h3>
+<ul>
+<li><a href="https://elm.edina.ac.uk/elm"><strong>Edinburgh University’s ELM service</strong></a> provides secure access to several LLMs, including open-weights models (such as Qwen 3.5), on university servers, with guidance and usage tips.</li>
+<li><a href="https://lmstudio.ai/"><strong>LM Studio</strong></a>: a beginner-friendly desktop app for downloading and running local LLMs on your own computer. It can also connect to paid cloud models if you want.</li>
+<li><strong>Communities and repositories</strong>: <a href="https://huggingface.co/"><strong>Hugging Face</strong></a> (a repository of models, datasets and more) and the <a href="https://www.reddit.com/r/LocalLLaMA/"><strong>r/LocalLLaMA</strong></a> &amp; <a href="https://www.reddit.com/r/LocalLLM/"><strong>r/LocalLLM</strong></a> subreddit (tools, tips, discussion on running models locally).</li>
+<li>Personal favourite: <a href="https://github.com/ThorOdinson246/whatisit-nl2sh"><strong>whatisit-nl2sh</strong></a>: a small model that turns a plain-English request (“how do I find a file on this server?”) into a bash command and can run on lightweight and older machines.</li>
+</ul>
+</section>
+</section>
+<section id="do-these-criticisms-apply-to-research-ml" class="level2">
+<h2 class="anchored" data-anchor-id="do-these-criticisms-apply-to-research-ml">2.6 Do these criticisms apply to research ML?</h2>
+<p><strong>Mostly not</strong>, or at least not in the same way. Research ML models are niche, small, and built under constraints.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criticism</th>
+<th>In research ML</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Energy</strong></td>
+<td>Depends. <strong>Classical ML</strong> needs far less computing power than <strong>deep learning</strong>. Even deep-learning researchers are limited by data, funding and hardware, so the same “born out of constraint” selection effect applies. Work is usually done locally or on existing bioinformatics servers</td>
+</tr>
+<tr class="even">
+<td><strong>Stolen / copyrighted data</strong></td>
+<td>Data must be <strong>available, ethically sourced and, for clinical data, appropriately secured</strong>. If you do not disclose what you trained on, you will struggle to publish: reviewers, journals, funders and public-health bodies will ask where your data came from</td>
+</tr>
+<tr class="odd">
+<td><strong>Cognitive decay</strong></td>
+<td>The same logic applies: <em>could you determine a protein’s function just by reading its amino-acid sequence?</em> Probably not, so you should be able to critically examine a model’s results and ask whether they make sense. Clinical models must pass <strong>quality and oversight checks</strong> like any other tool, and are typically used as <strong>human-in-the-loop</strong> systems with continuing human oversight</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="part-3-pitfalls-of-machine-learning-in-research" class="level1">
+<h1>Part 3: Pitfalls of machine learning in research</h1>
+<p>So, is all well with research ML? <strong>No.</strong> Without the mainstream controversies it still has plenty of ways to go wrong.</p>
+<p>Most criticisms stem from one basic fact: <strong>ML models are bias-replicating machines.</strong> Whatever you feed in is what you get out.</p>
+<section id="the-main-issues" class="level2">
+<h2 class="anchored" data-anchor-id="the-main-issues">3.1 The main issues</h2>
+<section id="bias-replication-garbage-in-garbage-out" class="level3">
+<h3 class="anchored" data-anchor-id="bias-replication-garbage-in-garbage-out">Bias replication: “garbage in, garbage out”</h3>
+<blockquote class="blockquote">
+<p><em>Do I have a large, representative dataset?</em></p>
+</blockquote>
+<p>If the training data is skewed (a single lineage, one hospital, one demographic group, one lab’s protocol), the model will inherit that skew. You may get a model that performs badly, or one that looks deceptively good.</p>
+</section>
+<section id="overfitting-and-poor-generalisability" class="level3">
+<h3 class="anchored" data-anchor-id="overfitting-and-poor-generalisability">Overfitting and poor generalisability</h3>
+<p>A model that has memorised noise in the training data will score brilliantly on that data but poorly on anything new. This is <strong>overfitting</strong>, and the result is <strong>poor generalisability</strong>: it does not work “in the wild”. A useful picture comes from fitting a curve to scattered points:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Underfit</strong></th>
+<th><strong>Optimum</strong></th>
+<th><strong>Overfit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>The model is…</strong></td>
+<td>Too simple; misses the real pattern</td>
+<td>Captures the real pattern</td>
+<td>So flexible it traces every wobble, including noise</td>
+</tr>
+<tr class="even">
+<td><strong>Training error</strong></td>
+<td>High</td>
+<td>Low</td>
+<td>Very low</td>
+</tr>
+<tr class="odd">
+<td><strong>Test error</strong></td>
+<td>High</td>
+<td>Low</td>
+<td><strong>High</strong></td>
+</tr>
+</tbody>
+</table>
+<p>An overfit model is the machine-learning equivalent of drawing a 12th-order polynomial through a dose–response curve: it hits every point and predicts nothing.</p>
+</section>
+<section id="correlation-is-not-causation" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-is-not-causation">Correlation is not causation</h3>
+<blockquote class="blockquote">
+<p><em>Are the model’s rules based on biologically important factors?</em></p>
+</blockquote>
+<p>When a model uses certain genes or features to make decisions, you do <strong>not</strong> know that they are biologically causative. A classic trap in bacterial genomics is that closely related isolates share both their genes <em>and</em> their phenotypes, so a model may learn <strong>lineage</strong> rather than <strong>mechanism</strong>. The same goes for batch effects and other confounders. Follow up with experiments and be careful about how you filter and select your data.</p>
+</section>
+<section id="reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="reproducibility">Reproducibility</h3>
+<p>This is not unique to ML, but it matters a great deal in bioinformatics. Store your data properly, make your code available, and make it easy for yourself and others to re-run your models, replicate your approach and improve on it.</p>
+</section>
+<section id="high-technical-skills-required" class="level3">
+<h3 class="anchored" data-anchor-id="high-technical-skills-required">High technical skills required</h3>
+<p>ML research is multidisciplinary, and it demands programming, statistics <em>and</em> biology. Common rookie mistakes include:</p>
+<ul>
+<li>not testing the model properly before publishing (no held-out test data, no cross-validation),</li>
+<li>fitting it to meaningless data because the biology wasn’t understood,</li>
+<li>not understanding the statistics behind the method.</li>
+</ul>
+<p>Most biologists will find the statistics and programming harder than the biology, and computational scientists will find the reverse.</p>
+</section>
+<section id="overcomplicating-or-overestimating" class="level3">
+<h3 class="anchored" data-anchor-id="overcomplicating-or-overestimating">Overcomplicating, or overestimating</h3>
+<blockquote class="blockquote">
+<p><em>Am I overcomplicating my approach?</em> You do not need a 70-billion-parameter neural network to identify cell shape.</p>
+<p><em>Am I overestimating ML’s capabilities?</em> You are not going to cure cancer with a small random forest.</p>
+</blockquote>
+<p>Match the method to the problem. Start simple, and add complexity only when it is justified.</p>
+</section>
+</section>
+<section id="how-to-avoid-these-issues" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-avoid-these-issues">3.2 How to avoid these issues</h2>
+<p>The short answer is that you should not try to do it entirely alone; the longer answer is a practical checklist:</p>
+<ol type="1">
+<li><strong>Define the question and the data first.</strong> What is x, what is y, and is y actually reliable?</li>
+<li><strong>Check your data is representative.</strong> Who or what is missing? Are there batches, lineages, sites or demographics that could confound the result?</li>
+<li><strong>Start with a simple baseline</strong> (such as logistic regression or a random forest) before reaching for deep learning. Always compare your model against it.</li>
+<li><strong>Hold out test data that the model never sees</strong>, and use <strong>cross-validation</strong>. Where samples are related (same patient, same lineage, same batch), split by <em>group</em> so related samples don’t leak between training and test sets.</li>
+<li><strong>Pick metrics that fit the problem.</strong> With rare outcomes, “accuracy” can be misleading: a model that always predicts “susceptible” can be 95% accurate if 95% of isolates are susceptible. Look at precision, recall and similar measures.</li>
+<li><strong>Interrogate what the model learned.</strong> Use feature-importance tools, and ask whether the important features make biological sense.</li>
+<li><strong>Validate biologically</strong>, with independent datasets or experiments, not just the same data again.</li>
+<li><strong>Document and share</strong> your data, code and settings.</li>
+<li><strong>Get help.</strong> Involve a collaborator or a bioinformatics core early, ideally <em>before</em> you generate the data.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="part-4-summary-and-key-takeaways" class="level1">
+<h1>Part 4: Summary and key takeaways</h1>
+<p>After reading this overview you should be able to:</p>
+<ul>
+<li><strong>Distinguish between</strong> “AI”, LLMs, generative AI and machine learning.</li>
+<li>Recognise that <strong>LLMs are over-represented</strong> commercially and in popular discourse, whereas <strong>machine learning is steadily growing, but more quietly and in niches</strong>.</li>
+<li>Describe roughly <strong>how a machine-learning model is built</strong>, and the difference between <strong>supervised and unsupervised</strong> methods. In practice: <em>do I have labelled data, or do I need to cluster first?</em></li>
+<li>Know the <strong>common criticisms</strong> of AI (energy, data and labour, cognitive decay), the <strong>open / local LLMs</strong> that offer an alternative, and the <strong>pitfalls and technical skills</strong> needed for good ML research.</li>
+</ul>
+<hr>
+</section>
+<section id="part-5-getting-started-and-resources" class="level1">
+<h1>Part 5: Getting started and resources</h1>
+<section id="a-suggested-learning-path" class="level2">
+<h2 class="anchored" data-anchor-id="a-suggested-learning-path">5.1 A suggested learning path</h2>
+<ol type="1">
+<li><strong>The command line (Bash).</strong> Most bioinformatics and ML tools are run from here, and it is the foundation for everything else.</li>
+<li><strong>A programming language.</strong> <strong>Python</strong> has the largest ML ecosystem; <strong>R</strong> is also well supported and may feel more familiar if you already use it for statistics.</li>
+<li><strong>A machine-learning framework.</strong> A framework is a toolbox that provides ready-made building blocks for models. In Python, <em>scikit-learn</em> covers classical ML and <em>PyTorch</em> (or TensorFlow) covers deep learning.</li>
+<li><strong>ML theory and practice.</strong> Plenty of free guides exist online, but be careful: some are themselves AI-generated and contain errors. The <strong>StatQuest</strong> YouTube channel is a well-regarded starting point, with clear diagrams explaining the most popular ML algorithms.</li>
+</ol>
+</section>
+<section id="training-and-support-from-the-discovery-research-platform" class="level2">
+<h2 class="anchored" data-anchor-id="training-and-support-from-the-discovery-research-platform">5.2 Training and support from the Discovery Research Platform</h2>
+<p>The <strong>Discovery Research Platform for Hidden Cell Biology (DRP-HCB)</strong> hosts a bioinformatics core that includes a dedicated AI bioinformatician. Support includes:</p>
+<ul>
+<li><strong>Training</strong>
+<ul>
+<li>Upcoming <a href="bioinformatics_live.html"><em>Machine Learning with Python</em>(live session</a>): build “a nifty little model” on your own laptop.</li>
+<li>Existing Unix command-line (Bash) workshops, with Python courses and further ML modules in development.</li>
+</ul></li>
+<li><strong>Consultation for projects</strong>: advice, and links to further resources, whether you want to collaborate on building a model or just want to know whether ML is the right tool.</li>
+<li><strong>Contact:</strong> achalka@ed.ac.uk · shaun.webb@ed.ac.uk</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="glossary" class="level1">
+<h1>Glossary</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Algorithm</strong></td>
+<td>A fixed, step-by-step recipe for performing a calculation</td>
+</tr>
+<tr class="even">
+<td><strong>Artificial intelligence (AI)</strong></td>
+<td>Umbrella term for computer systems that perform tasks associated with intelligence. Also used loosely to mean LLMs, or as a marketing label</td>
+</tr>
+<tr class="odd">
+<td><strong>Black box</strong></td>
+<td>A model whose internal logic cannot easily be interpreted by humans</td>
+</tr>
+<tr class="even">
+<td><strong>Classical machine learning</strong></td>
+<td>Traditional statistical ML algorithms (regression, decision trees, random forests, SVMs, clustering…)</td>
+</tr>
+<tr class="odd">
+<td><strong>Cross-validation</strong></td>
+<td>Repeatedly splitting your data into training and test portions to check how well a model generalises</td>
+</tr>
+<tr class="even">
+<td><strong>Deep learning</strong></td>
+<td>ML using neural networks with many layers</td>
+</tr>
+<tr class="odd">
+<td><strong>Discriminative model</strong></td>
+<td>A model that learns the boundary between classes (“cat or dog?”)</td>
+</tr>
+<tr class="even">
+<td><strong>Expert system</strong></td>
+<td>Older approach to AI in which humans hand-write the rules</td>
+</tr>
+<tr class="odd">
+<td><strong>Feature</strong></td>
+<td>An input variable used by a model (for example, presence of a gene)</td>
+</tr>
+<tr class="even">
+<td><strong>Generative model</strong></td>
+<td>A model that learns the distribution of its data and can create new, similar data</td>
+</tr>
+<tr class="odd">
+<td><strong>GPT</strong></td>
+<td>Generative Pre-trained Transformer, the architecture behind many LLMs</td>
+</tr>
+<tr class="even">
+<td><strong>Hallucination</strong></td>
+<td>A fluent but false output from an LLM</td>
+</tr>
+<tr class="odd">
+<td><strong>Label / target</strong></td>
+<td>The known outcome a supervised model is trained to predict (for example, resistant / susceptible)</td>
+</tr>
+<tr class="even">
+<td><strong>Large language model (LLM)</strong></td>
+<td>A generative deep-learning model trained on huge text datasets (ChatGPT, Claude, Gemini…)</td>
+</tr>
+<tr class="odd">
+<td><strong>Machine learning (ML)</strong></td>
+<td>Algorithms that learn rules from data instead of being given them</td>
+</tr>
+<tr class="even">
+<td><strong>Model</strong></td>
+<td>The learned rules (parameters) that turn an input into a prediction</td>
+</tr>
+<tr class="odd">
+<td><strong>Neural network</strong></td>
+<td>A layered network of simple units whose connection weights are tuned during training</td>
+</tr>
+<tr class="even">
+<td><strong>Open-weights / open-source / local</strong></td>
+<td>See <a href="#25-open-and-local-llms-a-more-ethical-approach">section 2.5</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Overfitting</strong></td>
+<td>A model that fits its training data (including noise) too closely and fails on new data</td>
+</tr>
+<tr class="even">
+<td><strong>Parameter / weight</strong></td>
+<td>A number inside a model that is adjusted during training</td>
+</tr>
+<tr class="odd">
+<td><strong>Supervised learning</strong></td>
+<td>Learning from labelled examples to predict an outcome</td>
+</tr>
+<tr class="even">
+<td><strong>Transformer</strong></td>
+<td>A neural-network architecture suited to sequential data (text, DNA, proteins)</td>
+</tr>
+<tr class="odd">
+<td><strong>Unsupervised learning</strong></td>
+<td>Finding structure (clusters, patterns) in unlabelled data</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

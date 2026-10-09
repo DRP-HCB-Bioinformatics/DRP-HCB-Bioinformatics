@@ -16,11 +16,11 @@ Although machine learning is a subfield of AI, but it is itself a wide umbrella,
 
 **In summary:**
 
--   **AI** = the goal (machines behaving intelligently)
+- **AI** = the goal (machines behaving intelligently)
 
 <!-- -->
 
--   **ML** = a method for reaching that goal (learning from data/examples rather than being explicitly programmed)
+- **ML** = a method for reaching that goal (learning from data/examples rather than being explicitly programmed)
 
 ## 2. What can I do with AI/ML?
 
@@ -36,14 +36,14 @@ There are many ready-to-use tools available, covering a wide range of tasks.
 
 **Large Language Models (LLMs)** are the most popular of these. They're powerful, but caution is advised if you use them for anything beyond formatting or summarizing text (see [What about LLMs?](#what-about-llms) below for why).
 
--   Online tools such as ChatGPT
--   LLMs hosted by the [ELM Platform](https://elm.edina.ac.uk/saml2/authenticate/elm)
--   Locally-hosted LLMs, e.g. via [Unsloth](https://github.com/unslothai/unsloth) or [LM Studio](https://lmstudio.ai/)
+- Online tools such as ChatGPT
+- LLMs hosted by the [ELM Platform](https://elm.edina.ac.uk/saml2/authenticate/elm)
+- Locally-hosted LLMs, e.g. via [Unsloth](https://github.com/unslothai/unsloth) or [LM Studio](https://lmstudio.ai/)
 
 **Biology-focused tools** are also widely available:
 
--   [AlphaFold](https://alphafold.ebi.ac.uk/) is probably the most prominent example, used for protein structure prediction.
--   Many other tools exist for tasks across genomics, imaging, etc. Some are accessible online, others run locally.
+- [AlphaFold](https://alphafold.ebi.ac.uk/) is probably the most prominent example, used for protein structure prediction.
+- Many other tools exist for tasks across genomics, imaging, etc. Some are accessible online, others run locally.
 
 ### 2.2. Create your own models
 
@@ -55,19 +55,19 @@ If your data is **unlabeled** (i.e. you have not assigned your samples to catego
 
 **Examples of unlabeled data:**
 
--   Single-cell RNA-seq counts across thousands of genes, with no prior information about which cell type each cell belongs to.
+- Single-cell RNA-seq counts across thousands of genes, with no prior information about which cell type each cell belongs to.
 
--   SNP genotype data across a population, where you don't yet know how individuals group into subpopulations.
+- SNP genotype data across a population, where you don't yet know how individuals group into subpopulations.
 
--   Microbiome community profiles from different samples, with no predefined groupings of "similar" samples.
+- Microbiome community profiles from different samples, with no predefined groupings of "similar" samples.
 
 If your data is **labelled** (i.e. a category or outcome is already assigned to each sample) and you want to build a model that accurately predicts that category for new samples, you'll use **supervised learning**.
 
 **Examples of labelled data:**
 
--   Images of cells labelled as cancerous or non-cancerous
+- Images of cells labelled as cancerous or non-cancerous
 
--   Transcriptomic profiles labelled by cell type or disease status
+- Transcriptomic profiles labelled by cell type or disease status
 
 #### **2.2.1 Unsupervised models**
 
@@ -77,19 +77,19 @@ If your data is **labelled** (i.e. a category or outcome is already assigned to 
 
 **Common approaches:**
 
--   **Clustering algorithms** group similar samples together. Popular methods include *k-means* (partitions data into a fixed number of clusters), *hierarchical clustering* (builds a tree of nested clusters, similar in spirit to a phylogenetic tree), and *DBSCAN* (finds clusters of varying shape and density, and can flag outliers).
+- **Clustering algorithms** group similar samples together. Popular methods include *k-means* (partitions data into a fixed number of clusters), *hierarchical clustering* (builds a tree of nested clusters, similar in spirit to a phylogenetic tree), and *DBSCAN* (finds clusters of varying shape and density, and can flag outliers).
 
--   **Dimensionality reduction** techniques compress high-dimensional data (e.g. thousands of genes) down to a handful of components that capture most of the variation, making the data easier to visualise and interpret. Common methods include *PCA* (Principal Component Analysis), *t-SNE*, and *UMAP*.
+- **Dimensionality reduction** techniques compress high-dimensional data (e.g. thousands of genes) down to a handful of components that capture most of the variation, making the data easier to visualise and interpret. Common methods include *PCA* (Principal Component Analysis), *t-SNE*, and *UMAP*.
 
 **Use cases:**
 
--   Identifying novel cell types or states from single-cell RNA-seq data.
+- Identifying novel cell types or states from single-cell RNA-seq data.
 
--   Uncovering population structure from SNP/genotype data.
+- Uncovering population structure from SNP/genotype data.
 
--   Grouping samples by expression or methylation profile to reveal disease subtypes.
+- Grouping samples by expression or methylation profile to reveal disease subtypes.
 
--   Visualising high-dimensional omics data in two or three dimensions for exploratory analysis
+- Visualising high-dimensional omics data in two or three dimensions for exploratory analysis
 
 #### **2.2.2 Supervised models**
 
@@ -99,19 +99,19 @@ If your data is **labelled** (i.e. a category or outcome is already assigned to 
 
 **Common approaches:**
 
--   **Classification** predicts a category (e.g. "cancerous" vs "non-cancerous", or one of several cell types).
+- **Classification** predicts a category (e.g. "cancerous" vs "non-cancerous", or one of several cell types).
 
--   **Regression** predicts a continuous value (e.g. predicted gene expression level, or a patient's age from methylation data).
+- **Regression** predicts a continuous value (e.g. predicted gene expression level, or a patient's age from methylation data).
 
 **Use cases:**
 
--   Diagnosing disease from medical images (e.g. classifying histopathology slides as cancerous or benign).
+- Diagnosing disease from medical images (e.g. classifying histopathology slides as cancerous or benign).
 
--   Predicting protein function or structure-activity relationships from sequence data.
+- Predicting protein function or structure-activity relationships from sequence data.
 
--   Predicting drug response or toxicity from molecular features.
+- Predicting drug response or toxicity from molecular features.
 
--   Classifying cell type from single-cell gene expression profiles, once reference labels are .
+- Classifying cell type from single-cell gene expression profiles, once reference labels are .
 
 ### 2.3. What about Deep Learning? {#what-about-deep-learning-deepl}
 
@@ -119,9 +119,9 @@ Deep learning is a subfield of machine learning based on artificial neural netwo
 
 **Classical ML vs. deep learning:**
 
--   **Classical ML** methods (e.g. random forests, SVMs, logistic regression) generally rely on *manually engineered features*; a human decides, using domain knowledge, which measurements or summary statistics to feed into the model (e.g. GC content, expression of a specific gene panel). They tend to work well even with relatively small datasets and are often more interpretable.
+- **Classical ML** methods (e.g. random forests, SVMs, logistic regression) generally rely on *manually engineered features*; a human decides, using domain knowledge, which measurements or summary statistics to feed into the model (e.g. GC content, expression of a specific gene panel). They tend to work well even with relatively small datasets and are often more interpretable.
 
--   **Deep learning** methods can learn useful features directly from raw data (e.g. raw pixel values in an image, or raw DNA/protein sequence), removing the need for manual feature engineering. This flexibility comes at a cost: deep learning models typically require much larger datasets and significantly more computational power to train well, and they are often harder to interpret ("black box" behaviour).
+- **Deep learning** methods can learn useful features directly from raw data (e.g. raw pixel values in an image, or raw DNA/protein sequence), removing the need for manual feature engineering. This flexibility comes at a cost: deep learning models typically require much larger datasets and significantly more computational power to train well, and they are often harder to interpret ("black box" behaviour).
 
 As a rule of thumb: if you have a modest, well-structured dataset and interpretability matters, classical ML is often the better starting point. If you have very large datasets (e.g. large imaging or sequence datasets) and the relationships in the data are complex, deep learning may offer an advantage.
 
@@ -131,11 +131,11 @@ Importantly, both unsupervised and supervised models can be built using either c
 
 Large Language Models (LLMs) are a subfield of **generative AI**, which is distinct from the **discriminative AI** methods described above (unsupervised and supervised learning, as typically applied to classification or clustering tasks).
 
--   **Discriminative models** learn to distinguish between categories or predict an outcome from input data (e.g. "is this cell cancerous or not?").
+- **Discriminative models** learn to distinguish between categories or predict an outcome from input data (e.g. "is this cell cancerous or not?").
 
--   **Generative models**, by contrast, learn to produce new content (text, images, sequences, and so on) that resembles the data they were trained on.
+- **Generative models**, by contrast, learn to produce new content (text, images, sequences, and so on) that resembles the data they were trained on.
 
-    -   **LLMs** are a type of generative model trained on huge amounts of text, and are the technology behind tools like ChatGPT.
+  - **LLMs** are a type of generative model trained on huge amounts of text, and are the technology behind tools like ChatGPT.
 
 In a simplified sense, LLMs work by predicting the next word in a sequence in order to generate *plausible* (not necessarily *accurate*) text. Because of this distinction, LLM output should never be trusted as correct without verification, and LLMs frequently "hallucinate" (i.e. confidently produce false information, broken code, or fabricated citations).
 
@@ -155,31 +155,33 @@ That depends on what you want to learn! Below is a rough guide, ranked in order 
 
 ### 3.1. Skills & Training
 
--   **Bash (Linux command line)**: Essential for performing basic operations on computers and running bioinformatics tools.
+- **Bash (Linux command line)**: Essential for performing basic operations on computers and running bioinformatics tools.
 
-    -   [WCB introduction to Linux course](http://bifx-core3.bio.ed.ac.uk/hyweldd/training/Bioinformatics_on_the_Command_Line/)
+  - [WCB introduction to Linux course](http://bifx-core3.bio.ed.ac.uk/hyweldd/training/Bioinformatics_on_the_Command_Line/)
 
--   **Python**: most major ML frameworks (scikit-learn, TensorFlow, PyTorch, etc.) are Python-based, so programming knowledge here goes a long way.
+- **Python**: most major ML frameworks (scikit-learn, TensorFlow, PyTorch, etc.) are Python-based, so programming knowledge here goes a long way.
 
-    -   COMING SOON
+  - COMING SOON
 
--   **Domain knowledge**: Every good ML project needs good data, and depending on your project you'll need the relevant biological/bioinformatics background to generate & interpret it correctly.
+- **Domain knowledge**: Every good ML project needs good data, and depending on your project you'll need the relevant biological/bioinformatics background to generate & interpret it correctly.
 
--   **ML theory and practice**: Algorithms, good modelling practices, how to avoid common pitfalls (overfitting, data leakage, etc.), plus how to actually implement and train models in code
+- **ML theory and practice**: Algorithms, good modelling practices, how to avoid common pitfalls (overfitting, data leakage, etc.), plus how to actually implement and train models in code
 
-    -   [An Introduction to ML with Python]() (Upcoming) - TO UPDATE
+  - [A Overview of AI in Biology](an_overview_of_ai_in_biology.html): Previous talk with a bird's eye view of the field, some basic taxonomy of the different AI models & discussion about benefits & criticisms of how it's popularly used.
+
+  - **Upcoming Bioinfomatics Live Session**: [Introduction To Machine Learning with Python](bioinfomatics_live.html)
 
 We're also happy to discuss long-term collaboration on projects. Please get in touch with Annita Chalka (achalka\@ed.ac.uk) or Shaun Webb (shaun.webb\@ed.ac.uk).
 
 ### 3.2. External Resources
 
--   **Bash**
-    -   [The Unix Shell by Software Carpentry](https://swcarpentry.github.io/shell-novice/)
--   **Python**
-    -   [Sci-kit Documentation](https://scikit-learn.org/stable/index.html): Popular classical ML framework.
-    -   [Tensorflow Documentation](https://www.tensorflow.org/tutorials): Deep Learning ML framework.
--   **ML theory and practice**
-    -   [StatQuest](https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF): Videos going into detail about popular ML algorithms & techniques.
+- **Bash**
+  - [The Unix Shell by Software Carpentry](https://swcarpentry.github.io/shell-novice/)
+- **Python**
+  - [Sci-kit Documentation](https://scikit-learn.org/stable/index.html): Popular classical ML framework.
+  - [Tensorflow Documentation](https://www.tensorflow.org/tutorials): Deep Learning ML framework.
+- **ML theory and practice**
+  - [StatQuest](https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF): Videos going into detail about popular ML algorithms & techniques.
 
 ------------------------------------------------------------------------
 
